@@ -1,0 +1,8 @@
+# /etc/sudoers.d/pgbouncer-manager
+# Allow the app user to control ONLY the pgbouncer unit, no other sudo access.
+# Replace "appuser" with the actual user running the Go binary.
+
+appuser ALL=(root) NOPASSWD: /usr/bin/systemctl start pgbouncer
+appuser ALL=(root) NOPASSWD: /usr/bin/systemctl stop pgbouncer
+appuser ALL=(root) NOPASSWD: /usr/bin/systemctl restart pgbouncer
+appuser ALL=(root) NOPASSWD: /usr/bin/systemctl is-active pgbouncer

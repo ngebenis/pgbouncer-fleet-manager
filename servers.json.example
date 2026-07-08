@@ -1,0 +1,20 @@
+{
+  "servers": [
+    {
+      "id": "prd01",
+      "label": "Production 01",
+      "admin_host": "10.0.0.10",
+      "admin_port": "6432",
+      "admin_user": "pgbouncer_admin",
+      "admin_pass": "",
+      "ini_path": "",
+      "service_name": "pgbouncer",
+      "control_mode": "ssh",
+      "ssh_host": "10.0.0.10",
+      "ssh_port": "22",
+      "ssh_user": "pgbouncer_ctl",
+      "ssh_key_path": "/run/secrets/pgb_ssh_key",
+      "ssh_use_sudo": true
+    }
+  ]
+}

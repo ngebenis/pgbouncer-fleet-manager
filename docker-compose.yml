@@ -1,0 +1,31 @@
+services:
+  pgbouncer-manager:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pgbouncer-manager:latest
+    container_name: pgbouncer-manager
+    restart: unless-stopped
+    ports:
+      - "8088:8088"
+    env_file:
+      - .env
+    environment:
+      PGB_SERVERS_FILE: /app/servers.json
+      PGB_LISTEN_ADDR: ":8088"
+      PGB_USERS_FILE: /app/data/users.json
+      PGB_AUDIT_FILE: /app/data/audit.json
+      PGB_ALERTS_FILE: /app/data/alerts.json
+    volumes:
+      - ./servers.json:/app/servers.json
+      - ./secrets/pgb_ssh_key:/run/secrets/pgb_ssh_key:ro
+      - pgbm_data:/app/data
+    networks:
+      - pgbm-net
+
+volumes:
+  pgbm_data:
+
+networks:
+  pgbm-net:
+    driver: bridge

@@ -1,0 +1,9 @@
+.env
+servers.json
+secrets/pgb_ssh_key
+secrets/pgb_ssh_key.pub
+!secrets/README.md
+web/node_modules/
+web/dist/
+*.bak
+*.zip

@@ -1,0 +1,20 @@
+# /etc/sudoers.d/pgbouncer-manager
+# Jalankan ini DI SERVER PGBOUNCER (bukan di server pgbouncer-manager).
+# User "pgbouncer_ctl" ini khusus dipakai untuk login SSH dari pgbouncer-manager,
+# dan HANYA boleh menjalankan 4 command systemctl di bawah ini — tidak ada akses
+# sudo lain.
+
+pgbouncer_ctl ALL=(root) NOPASSWD: /usr/bin/systemctl start pgbouncer
+pgbouncer_ctl ALL=(root) NOPASSWD: /usr/bin/systemctl stop pgbouncer
+pgbouncer_ctl ALL=(root) NOPASSWD: /usr/bin/systemctl restart pgbouncer
+pgbouncer_ctl ALL=(root) NOPASSWD: /usr/bin/systemctl is-active pgbouncer
+
+# Rekomendasi tambahan di server PgBouncer:
+# 1. Buat user "pgbouncer_ctl" khusus, jangan pakai user existing:
+#      sudo useradd -m -s /bin/bash pgbouncer_ctl
+# 2. Pasang public key dari ./secrets/pgb_ssh_key.pub ke:
+#      /home/pgbouncer_ctl/.ssh/authorized_keys
+# 3. Di /etc/ssh/sshd_config, nonaktifkan password login untuk user ini
+#    (atau global PasswordAuthentication no kalau memang seluruh server pakai key-only).
+# 4. Pastikan port admin PgBouncer (default 6432) bisa diakses dari IP/network
+#    tempat container pgbouncer-manager berjalan (firewall / security group).
