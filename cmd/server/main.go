@@ -30,6 +30,8 @@ func main() {
 	api := handlers.NewAPI(cfg, reg, users, audit)
 	api.RegisterRoutes(r)
 	r.Static("/assets","./web/dist/assets")
+	r.StaticFile("/favicon.ico","./web/dist/favicon.ico")
+	r.StaticFile("/favicon.png","./web/dist/favicon.png")
 	r.StaticFile("/","./web/dist/index.html")
 	r.NoRoute(func(c *gin.Context) { c.File("./web/dist/index.html") })
 	log.Printf("pgbouncer-manager listening on %s", cfg.ListenAddr)
