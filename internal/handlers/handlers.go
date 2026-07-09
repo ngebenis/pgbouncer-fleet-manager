@@ -58,6 +58,7 @@ func (a *API) RegisterRoutes(r *gin.Engine) {
 		api.PUT("/servers/:id", auth.AdminOnly, a.updateServer)
 		api.DELETE("/servers/:id", auth.AdminOnly, a.deleteServer)
 		api.POST("/servers/:id/test", a.testServer)
+		api.GET("/ssh-pubkey", a.getSSHPubKey)
 		api.GET("/users", auth.AdminOnly, a.listUsers)
 		api.POST("/users", auth.AdminOnly, a.createUser)
 		api.PUT("/users/:username", auth.AdminOnly, a.updateUser)
@@ -204,10 +205,12 @@ type serverInfo struct {
 	Host        string `json:"host"`
 	Port        string `json:"port"`
 	ControlMode string `json:"control_mode"`
+	SSHHost     string `json:"ssh_host"`
+	SSHUser     string `json:"ssh_user"`
 }
 func (a *API) listServers(c *gin.Context) {
 	list := a.reg.List(); out := make([]serverInfo, len(list))
-	for i, inst := range list { out[i] = serverInfo{ID:inst.Def.ID,Label:inst.Def.Label,Host:inst.Def.AdminHost,Port:inst.Def.AdminPort,ControlMode:inst.Def.ControlMode} }
+	for i, inst := range list { out[i] = serverInfo{ID:inst.Def.ID,Label:inst.Def.Label,Host:inst.Def.AdminHost,Port:inst.Def.AdminPort,ControlMode:inst.Def.ControlMode,SSHHost:inst.Def.SSHHost,SSHUser:inst.Def.SSHUser} }
 	c.JSON(200, gin.H{"servers":out})
 }
 type srvForm struct {
@@ -340,4 +343,22 @@ func (a *API) setGlobalField(c *gin.Context) {
 	if err:=inst.Ini.SetGlobalField(b.Field,b.Value); err!=nil{c.JSON(500,gin.H{"error":err.Error()}); return}
 	err:=inst.Pgb.Reload(c.Request.Context())
 	a.audit.Log(auth.GetUser(c),"config.global_field",fmt.Sprintf("%s=%s",b.Field,b.Value),auth.GetIP(c),err==nil,""); respondAction(c,"",err)
+}
+
+// getSSHPubKey returns the public key content so admin can deploy it to remote servers
+func (a *API) getSSHPubKey(c *gin.Context) {
+	// Try <key_path>.pub first, fallback to configured path
+	keyPath := a.cfg.SSHPrivateKey + ".pub"
+	data, err := os.ReadFile(keyPath)
+	if err != nil {
+		// Some setups name it differently, try without extension swap
+		c.JSON(http.StatusNotFound, gin.H{"error": "Public key tidak ditemukan di " + keyPath + ". Pastikan file .pub ada di samping private key."})
+		return
+	}
+	pubKey := strings.TrimSpace(string(data))
+	a.audit.Log(auth.GetUser(c), "ssh.view_pubkey", "", auth.GetIP(c), true, "")
+	c.JSON(http.StatusOK, gin.H{
+		"public_key": pubKey,
+		"key_path":   keyPath,
+	})
 }

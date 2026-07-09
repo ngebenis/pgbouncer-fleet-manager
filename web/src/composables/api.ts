@@ -32,6 +32,7 @@ export const api = {
     return http.post<ActionResponse>('/restore', fd).then(r => r.data)
   },
   getAlerts: () => http.get<any>('/alerts').then(r => r.data),
+  getSSHPubKey: () => http.get<{public_key:string;key_path:string}>('/ssh-pubkey').then(r => r.data),
   setAlerts: (cfg: any) => http.put<ActionResponse>('/alerts', cfg).then(r => r.data),
   getServiceStatus: (s:string) => http.get<StatusResponse>('/status', q(s)).then(r => r.data),
   getPools:     (s:string) => http.get<RowsResponse>('/pools', q(s)).then(r => r.data),
