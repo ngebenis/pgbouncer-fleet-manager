@@ -214,8 +214,20 @@ func (a *API) listServers(c *gin.Context) {
 	c.JSON(200, gin.H{"servers":out})
 }
 type srvForm struct {
-	ID,Label,AdminHost,AdminPort,AdminUser,AdminPass,IniPath,ServiceName,ControlMode,SSHHost,SSHPort,SSHUser,SSHKeyPath string
-	SSHUseSudo bool
+	ID          string `json:"id"`
+	Label       string `json:"label"`
+	AdminHost   string `json:"admin_host"`
+	AdminPort   string `json:"admin_port"`
+	AdminUser   string `json:"admin_user"`
+	AdminPass   string `json:"admin_pass"`
+	IniPath     string `json:"ini_path"`
+	ServiceName string `json:"service_name"`
+	ControlMode string `json:"control_mode"`
+	SSHHost     string `json:"ssh_host"`
+	SSHPort     string `json:"ssh_port"`
+	SSHUser     string `json:"ssh_user"`
+	SSHKeyPath  string `json:"ssh_key_path"`
+	SSHUseSudo  bool   `json:"ssh_use_sudo"`
 }
 func (b *srvForm) toDef() *registry.ServerDef {
 	p := b.AdminPort; if p=="" { p="6432" }
