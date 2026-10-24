@@ -6,7 +6,7 @@ import { useAuthStore } from './stores/auth'
 import { useTheme } from './stores/theme'
 import { useBranding } from './stores/branding'
 import { useToast } from './composables/useToast'
-import { useI18n } from './i18n'
+import { useI18n, LOCALES } from './i18n'
 import Toast from './components/Toast.vue'
 import LoginView from './views/LoginView.vue'
 import DashboardView from './views/DashboardView.vue'
@@ -26,13 +26,16 @@ const store = useServerStore()
 const auth = useAuthStore()
 const { theme, toggleTheme } = useTheme()
 const toast = useToast()
-const { t, locale, toggleLocale } = useI18n()
+const { t, locale, setLocale } = useI18n()
 const { branding, logoUrl, loadBranding } = useBranding()
 
 type Page = 'dashboard'|'pools'|'clients'|'servers'|'stats'|'databases'|'config'|'manage-servers'|'users'|'audit'|'backup'|'branding'
 const page = ref<Page>('dashboard')
 const showProfileMenu = ref(false)
 const showChangePass = ref(false)
+const showLangMenu = ref(false)
+const activeLocale = computed(() => LOCALES.find(l => l.code === locale.value) ?? LOCALES[0])
+function chooseLocale(code: typeof LOCALES[number]['code']) { setLocale(code); showLangMenu.value = false }
 const cpOld = ref(''); const cpNew = ref(''); const cpBusy = ref(false)
 
 const nav = computed(() => [
@@ -126,10 +129,16 @@ const pageTitle = computed(() => [...nav.value, ...adminNav.value].find(n => n.i
             <p v-if="activeServer" class="topbar-sub">{{ activeServer.label }} · {{ activeServer.host }}:{{ activeServer.port }}</p>
           </div>
           <div class="topbar-actions">
-            <button class="btn btn-xs btn-neutral" @click="toggleLocale">{{ locale === 'id' ? '🇮🇩 ID' : '🇬🇧 EN' }}</button>
+            <div class="user-menu-wrap">
+              <button class="btn btn-xs btn-neutral" @click="showLangMenu = !showLangMenu; showProfileMenu = false">{{ activeLocale.flag }} {{ activeLocale.code.toUpperCase() }}</button>
+              <div v-if="showLangMenu" class="user-dropdown lang-dropdown">
+                <button v-for="l in LOCALES" :key="l.code" class="dropdown-item"
+                  :class="{active: l.code === locale}" @click="chooseLocale(l.code)">{{ l.flag }} {{ l.label }}</button>
+              </div>
+            </div>
             <button class="btn btn-xs btn-neutral" @click="toggleTheme">{{ theme === 'dark' ? '☀' : '🌙' }}</button>
             <div class="user-menu-wrap">
-              <button class="btn btn-xs btn-neutral" @click="showProfileMenu = !showProfileMenu">
+              <button class="btn btn-xs btn-neutral" @click="showProfileMenu = !showProfileMenu; showLangMenu = false">
                 👤 {{ auth.username.value }}
                 <span class="badge" :class="auth.role.value==='admin'?'badge-ok':'badge-neutral'" style="margin-left:.3rem">{{ auth.role.value }}</span>
               </button>
@@ -199,6 +208,8 @@ const pageTitle = computed(() => [...nav.value, ...adminNav.value].find(n => n.i
 .user-dropdown{position:absolute;right:0;top:calc(100% + 6px);background:var(--surface);border:1px solid var(--border);border-radius:9px;min-width:180px;z-index:200;padding:.3rem;box-shadow:0 8px 24px rgba(0,0,0,.3)}
 .dropdown-item{display:block;width:100%;text-align:left;background:transparent;border:none;color:var(--text);padding:.5rem .75rem;border-radius:6px;cursor:pointer;font-size:.82rem}
 .dropdown-item:hover{background:var(--surface-hover)}.dropdown-item.danger{color:var(--danger)}
+.dropdown-item.active{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.lang-dropdown{min-width:190px;max-height:320px;overflow-y:auto}
 .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:1000;display:flex;align-items:center;justify-content:center;padding:1rem}
 .modal{background:var(--surface);border:1px solid var(--border);border-radius:14px;width:100%;max-width:420px}
 .modal-header{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.2rem;border-bottom:1px solid var(--border)}
