@@ -40,7 +40,7 @@ type API struct {
 func NewAPI(cfg *config.Config, reg *registry.Registry, users *store.UserStore, audit *store.AuditStore) *API {
 	a := &API{cfg:cfg, reg:reg, users:users, audit:audit,
 		alerts:AlertConfig{ClWaitingThreshold:1, MaxwaitMsThreshold:5000, Enabled:true},
-		branding:BrandingConfig{AppName:"PgBouncer", AppSub:"Manager", CompanyName:"PT. Nama Perusahaan Anda"}}
+		branding:BrandingConfig{AppName:"PgBouncer", AppSub:"Manager"}}
 	if data, err := os.ReadFile(cfg.AlertsFile); err == nil { json.Unmarshal(data, &a.alerts) }
 	if data, err := os.ReadFile(cfg.BrandingFile); err == nil { json.Unmarshal(data, &a.branding) }
 	return a

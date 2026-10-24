@@ -186,7 +186,7 @@ const M: Record<string, Record<string,string>> = {
     // Branding
     branding_identity:'Application Identity', branding_identity_hint:'This app and organization name appears on the login page, sidebar, and footer.',
     app_name:'App Name', app_sub:'Subtitle', company_name:'Company / Organization Name',
-    company_name_placeholder:'e.g. PT. Nama Perusahaan Anda',
+    company_name_placeholder:'e.g. Your Company Name Ltd.',
     logo:'Logo', logo_hint:'PNG, JPEG, WEBP, or SVG format. Max 2MB. Shown in the sidebar, login page, and browser tab.',
     logo_active:'Custom logo active', logo_default:'Using default icon (◈)',
     upload:'Upload', reset_logo:'Reset to Default', choose_file_first:'Choose a logo file first',
