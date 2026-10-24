@@ -1,6 +1,6 @@
 # PgBouncer Manager
 
-*[Bahasa Indonesia](README.md) · [English](README.en.md) · [中文](README.zh.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md)*
+*[Bahasa Indonesia](README.md) · [English](README.en.md) · [中文](README.zh.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md) · [ไทย](README.th.md) · [ខ្មែរ](README.km.md) · [Tagalog](README.tl.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Polski](README.pl.md) · [Italiano](README.it.md) · [Türkçe](README.tr.md) · [தமிழ்](README.ta.md) · [فارسی](README.fa.md) · [Українська](README.uk.md) · [Deutsch](README.de.md) · [Nederlands](README.nl.md)*
 
 PgBouncer की निगरानी और नियंत्रण के लिए एक हल्का वेब GUI: pools/clients/servers/stats की
 स्थिति देखना, सर्विस को start/stop/restart करना, config reload करना, पॉज़/रिज़्यूम करना, और

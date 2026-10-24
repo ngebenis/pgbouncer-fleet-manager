@@ -1,6 +1,6 @@
 # PgBouncer Manager
 
-*[Bahasa Indonesia](README.md) · [English](README.en.md) · [हिन्दी](README.hi.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md)*
+*[Bahasa Indonesia](README.md) · [English](README.en.md) · [हिन्दी](README.hi.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md) · [ไทย](README.th.md) · [ខ្មែរ](README.km.md) · [Tagalog](README.tl.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Polski](README.pl.md) · [Italiano](README.it.md) · [Türkçe](README.tr.md) · [தமிழ்](README.ta.md) · [فارسی](README.fa.md) · [Українська](README.uk.md) · [Deutsch](README.de.md) · [Nederlands](README.nl.md)*
 
 一个轻量级的 PgBouncer 监控与控制 Web 界面：查看 pools/clients/servers/stats 状态、
 启动/停止/重启服务、重新加载配置、暂停/恢复连接，以及按数据库修改 pool_mode。
