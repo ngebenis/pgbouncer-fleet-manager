@@ -26,6 +26,7 @@ const maxWaitMs      = computed(() => Math.max(0,...(pools.data.value?.rows??[])
 const poolCount      = computed(() => (pools.data.value?.rows??[]).length)
 
 const statusColor = (s?:string) => s==='active'?'ok':s==='failed'?'danger':s==='inactive'?'warn':'neutral'
+const statusLabel = (s?:string) => s==='active'?t('active'):s==='inactive'?t('status_inactive'):s==='failed'?t('status_failed'):s?t('status_unknown'):'...'
 const busy = ref<string|null>(null)
 
 async function runAction(action:'start'|'stop'|'restart'|'reload', confirmKey?:string) {
@@ -52,7 +53,7 @@ function togglePause() { const p=!status.paused.value; status.paused.value=p; po
           <span class="dot" :class="`dot-${statusColor(status.data.value?.status)}`"></span>
           <span class="card-title">{{ t('service') }}</span>
           <span class="badge" :class="`badge-${statusColor(status.data.value?.status)}`">
-            {{ status.data.value?.status ?? '...' }}
+            {{ statusLabel(status.data.value?.status) }}
           </span>
           <span v-if="version.data.value" class="muted" style="font-size:.72rem">· {{ version.data.value.version }}</span>
         </div>

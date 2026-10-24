@@ -99,7 +99,7 @@ const pageTitle = computed(() => [...nav.value, ...adminNav.value].find(n => n.i
           <div><div class="brand-name">{{ branding.app_name }}</div><div class="brand-sub">{{ branding.app_sub }}</div></div>
         </div>
         <div class="server-section">
-          <div class="section-label">Server</div>
+          <div class="section-label">{{ t('server_section') }}</div>
           <div v-for="s in store.servers.value" :key="s.id"
             class="server-item" :class="{ active: store.activeId.value === s.id }"
             @click="store.setActive(s.id)">
@@ -109,12 +109,12 @@ const pageTitle = computed(() => [...nav.value, ...adminNav.value].find(n => n.i
         </div>
         <hr class="sidebar-divider" />
         <nav class="sidebar-nav">
-          <div class="section-label">Menu</div>
+          <div class="section-label">{{ t('menu') }}</div>
           <template v-for="item in nav" :key="item.id">
             <button class="nav-item" :class="{ active: page === item.id }" @click="page = item.id">{{ item.label }}</button>
           </template>
           <template v-if="auth.isAdmin.value">
-            <div class="section-label" style="margin-top:.75rem">Admin</div>
+            <div class="section-label" style="margin-top:.75rem">{{ t('admin') }}</div>
             <template v-for="item in adminNav" :key="item.id">
               <button class="nav-item" :class="{ active: page === item.id }" @click="page = item.id">{{ item.label }}</button>
             </template>
