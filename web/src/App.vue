@@ -4,6 +4,7 @@ import { api } from './composables/api'
 import { useServerStore } from './stores/server'
 import { useAuthStore } from './stores/auth'
 import { useTheme } from './stores/theme'
+import { useBranding } from './stores/branding'
 import { useToast } from './composables/useToast'
 import { useI18n } from './i18n'
 import Toast from './components/Toast.vue'
@@ -19,14 +20,16 @@ import ManageServersView from './views/ManageServersView.vue'
 import UsersView from './views/UsersView.vue'
 import AuditLogView from './views/AuditLogView.vue'
 import BackupView from './views/BackupView.vue'
+import BrandingView from './views/BrandingView.vue'
 
 const store = useServerStore()
 const auth = useAuthStore()
 const { theme, toggleTheme } = useTheme()
 const toast = useToast()
 const { t, locale, toggleLocale } = useI18n()
+const { branding, logoUrl, loadBranding } = useBranding()
 
-type Page = 'dashboard'|'pools'|'clients'|'servers'|'stats'|'databases'|'config'|'manage-servers'|'users'|'audit'|'backup'
+type Page = 'dashboard'|'pools'|'clients'|'servers'|'stats'|'databases'|'config'|'manage-servers'|'users'|'audit'|'backup'|'branding'
 const page = ref<Page>('dashboard')
 const showProfileMenu = ref(false)
 const showChangePass = ref(false)
@@ -46,6 +49,7 @@ const adminNav = computed(() => [
   { id: 'users' as Page, label: t('users') },
   { id: 'audit' as Page, label: t('audit_log') },
   { id: 'backup' as Page, label: t('backup') },
+  { id: 'branding' as Page, label: t('branding') },
 ])
 
 async function loadServers() {
@@ -87,8 +91,9 @@ const pageTitle = computed(() => [...nav.value, ...adminNav.value].find(n => n.i
     <div v-else class="layout">
       <aside class="sidebar">
         <div class="sidebar-brand">
-          <span class="brand-icon">◈</span>
-          <div><div class="brand-name">PgBouncer</div><div class="brand-sub">Manager</div></div>
+          <img v-if="logoUrl" :src="logoUrl" alt="logo" class="brand-logo-img" />
+          <span v-else class="brand-icon">◈</span>
+          <div><div class="brand-name">{{ branding.app_name }}</div><div class="brand-sub">{{ branding.app_sub }}</div></div>
         </div>
         <div class="server-section">
           <div class="section-label">Server</div>
@@ -112,7 +117,7 @@ const pageTitle = computed(() => [...nav.value, ...adminNav.value].find(n => n.i
             </template>
           </template>
         </nav>
-        <div class="sidebar-footer"><span class="muted" style="font-size:.68rem">PT. Nama Perusahaan Anda</span></div>
+        <div v-if="branding.company_name" class="sidebar-footer"><span class="muted" style="font-size:.68rem">{{ branding.company_name }}</span></div>
       </aside>
       <div class="main-wrap">
         <header class="topbar">
@@ -148,6 +153,7 @@ const pageTitle = computed(() => [...nav.value, ...adminNav.value].find(n => n.i
           <UsersView         v-else-if="page==='users'" />
           <AuditLogView      v-else-if="page==='audit'" />
           <BackupView        v-else-if="page==='backup'" />
+          <BrandingView      v-else-if="page==='branding'" @saved="loadBranding" />
         </main>
       </div>
     </div>
@@ -172,7 +178,7 @@ const pageTitle = computed(() => [...nav.value, ...adminNav.value].find(n => n.i
 .layout{display:flex;height:100vh;overflow:hidden}
 .sidebar{width:var(--sidebar-w);min-width:var(--sidebar-w);background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow-y:auto}
 .sidebar-brand{display:flex;align-items:center;gap:.65rem;padding:1.1rem 1rem;border-bottom:1px solid var(--border)}
-.brand-icon{font-size:1.4rem;color:var(--accent)}.brand-name{font-size:.95rem;font-weight:700;line-height:1.1}
+.brand-icon{font-size:1.4rem;color:var(--accent)}.brand-logo-img{width:1.6rem;height:1.6rem;object-fit:contain;flex-shrink:0}.brand-name{font-size:.95rem;font-weight:700;line-height:1.1}
 .brand-sub{font-size:.68rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:.1em}
 .server-section{padding:.75rem .75rem .5rem}
 .section-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);margin-bottom:.4rem;padding:0 .25rem}

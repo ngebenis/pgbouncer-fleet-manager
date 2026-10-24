@@ -22,17 +22,27 @@ type AlertConfig struct {
 	MaxwaitMsThreshold int  `json:"maxwait_ms_threshold"`
 	Enabled            bool `json:"enabled"`
 }
+type BrandingConfig struct {
+	CompanyName string `json:"company_name"`
+	AppName     string `json:"app_name"`
+	AppSub      string `json:"app_sub"`
+	LogoMime    string `json:"logo_mime"`
+	HasLogo     bool   `json:"has_logo"`
+}
 type API struct {
-	cfg    *config.Config
-	reg    *registry.Registry
-	users  *store.UserStore
-	audit  *store.AuditStore
-	alerts AlertConfig
+	cfg      *config.Config
+	reg      *registry.Registry
+	users    *store.UserStore
+	audit    *store.AuditStore
+	alerts   AlertConfig
+	branding BrandingConfig
 }
 func NewAPI(cfg *config.Config, reg *registry.Registry, users *store.UserStore, audit *store.AuditStore) *API {
 	a := &API{cfg:cfg, reg:reg, users:users, audit:audit,
-		alerts:AlertConfig{ClWaitingThreshold:1, MaxwaitMsThreshold:5000, Enabled:true}}
+		alerts:AlertConfig{ClWaitingThreshold:1, MaxwaitMsThreshold:5000, Enabled:true},
+		branding:BrandingConfig{AppName:"PgBouncer", AppSub:"Manager", CompanyName:"PT. Nama Perusahaan Anda"}}
 	if data, err := os.ReadFile(cfg.AlertsFile); err == nil { json.Unmarshal(data, &a.alerts) }
+	if data, err := os.ReadFile(cfg.BrandingFile); err == nil { json.Unmarshal(data, &a.branding) }
 	return a
 }
 func (a *API) resolve(c *gin.Context) (*registry.Instance, bool) {
@@ -48,6 +58,8 @@ func (a *API) resolve(c *gin.Context) (*registry.Instance, bool) {
 }
 func (a *API) RegisterRoutes(r *gin.Engine) {
 	r.POST("/api/auth/login", a.loginHandler)
+	r.GET("/api/branding", a.getBranding)
+	r.GET("/api/branding/logo", a.getBrandingLogo)
 	api := r.Group("/api"); api.Use(auth.Required)
 	{
 		api.POST("/auth/logout", a.logoutHandler)
@@ -68,6 +80,9 @@ func (a *API) RegisterRoutes(r *gin.Engine) {
 		api.POST("/restore", auth.AdminOnly, a.restore)
 		api.GET("/alerts", a.getAlerts)
 		api.PUT("/alerts", auth.AdminOnly, a.setAlerts)
+		api.PUT("/branding", auth.AdminOnly, a.setBranding)
+		api.POST("/branding/logo", auth.AdminOnly, a.uploadBrandingLogo)
+		api.DELETE("/branding/logo", auth.AdminOnly, a.deleteBrandingLogo)
 		api.GET("/status", a.getServiceStatus)
 		api.GET("/pools", a.getPools)
 		api.GET("/clients", a.getClients)
@@ -197,6 +212,57 @@ func (a *API) setAlerts(c *gin.Context) {
 	a.alerts = b; data, _ := json.MarshalIndent(b, "", "  "); os.WriteFile(a.cfg.AlertsFile, data, 0640)
 	a.audit.Log(auth.GetUser(c), "alerts.update", "", auth.GetIP(c), true, "")
 	c.JSON(200, gin.H{"ok":true})
+}
+// Branding
+func (a *API) getBranding(c *gin.Context) { c.JSON(200, a.branding) }
+func (a *API) saveBranding() {
+	data, _ := json.MarshalIndent(a.branding, "", "  ")
+	os.WriteFile(a.cfg.BrandingFile, data, 0640)
+}
+func (a *API) setBranding(c *gin.Context) {
+	var body struct {
+		CompanyName string `json:"company_name"`
+		AppName     string `json:"app_name"`
+		AppSub      string `json:"app_sub"`
+	}
+	if err := c.ShouldBindJSON(&body); err != nil { c.JSON(400, gin.H{"error":"invalid request"}); return }
+	a.branding.CompanyName = strings.TrimSpace(body.CompanyName)
+	a.branding.AppName = strings.TrimSpace(body.AppName); if a.branding.AppName == "" { a.branding.AppName = "PgBouncer" }
+	a.branding.AppSub = strings.TrimSpace(body.AppSub); if a.branding.AppSub == "" { a.branding.AppSub = "Manager" }
+	a.saveBranding()
+	a.audit.Log(auth.GetUser(c), "branding.update", "", auth.GetIP(c), true, a.branding.CompanyName)
+	c.JSON(200, gin.H{"ok":true})
+}
+const maxLogoSize = 2 << 20 // 2MB
+var allowedLogoMime = map[string]bool{"image/png":true,"image/jpeg":true,"image/svg+xml":true,"image/webp":true,"image/x-icon":true}
+func (a *API) uploadBrandingLogo(c *gin.Context) {
+	file, err := c.FormFile("logo")
+	if err != nil { c.JSON(400, gin.H{"error":"logo file required"}); return }
+	if file.Size > maxLogoSize { c.JSON(400, gin.H{"error":"ukuran logo maksimal 2MB"}); return }
+	mime := file.Header.Get("Content-Type")
+	if !allowedLogoMime[mime] { c.JSON(400, gin.H{"error":"format harus PNG, JPEG, WEBP, atau SVG"}); return }
+	if err := c.SaveUploadedFile(file, a.cfg.LogoFile); err != nil { c.JSON(500, gin.H{"error":err.Error()}); return }
+	a.branding.LogoMime = mime
+	a.branding.HasLogo = true
+	a.saveBranding()
+	a.audit.Log(auth.GetUser(c), "branding.logo_upload", "", auth.GetIP(c), true, mime)
+	c.JSON(200, gin.H{"ok":true})
+}
+func (a *API) deleteBrandingLogo(c *gin.Context) {
+	os.Remove(a.cfg.LogoFile)
+	a.branding.LogoMime = ""
+	a.branding.HasLogo = false
+	a.saveBranding()
+	a.audit.Log(auth.GetUser(c), "branding.logo_reset", "", auth.GetIP(c), true, "")
+	c.JSON(200, gin.H{"ok":true})
+}
+func (a *API) getBrandingLogo(c *gin.Context) {
+	if !a.branding.HasLogo { c.Status(http.StatusNotFound); return }
+	data, err := os.ReadFile(a.cfg.LogoFile)
+	if err != nil { c.Status(http.StatusNotFound); return }
+	mime := a.branding.LogoMime; if mime == "" { mime = "image/png" }
+	c.Header("Cache-Control", "no-cache, max-age=0")
+	c.Data(http.StatusOK, mime, data)
 }
 // Server CRUD
 type serverInfo struct {

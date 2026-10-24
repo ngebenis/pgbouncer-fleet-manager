@@ -7,3 +7,4 @@ export interface IniSection { Name: string; Values: Record<string, string> }
 export interface RawConfigResponse { sections: IniSection[] }
 export interface ServerInfo { id: string; label: string; host: string; port: string; control_mode: string; ssh_user?: string; ssh_host?: string }
 export interface ServersListResponse { servers: ServerInfo[] }
+export interface BrandingConfig { company_name: string; app_name: string; app_sub: string; logo_mime: string; has_logo: boolean }

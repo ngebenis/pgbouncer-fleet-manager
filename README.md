@@ -81,6 +81,8 @@ sudo yang lebih luas dari 4 baris command tersebut.
 | `PGB_SERVICE_NAME` | `pgbouncer` | nama systemd unit |
 | `PGB_LISTEN_ADDR` | `:8088` | alamat listen web server |
 | `PGB_UI_USER` / `PGB_UI_PASS` | - | basic auth untuk UI (WAJIB diisi sebelum dipakai di luar localhost) |
+| `PGB_BRANDING_FILE` | `/app/data/branding.json` | path penyimpanan nama aplikasi/perusahaan (diatur lewat menu Branding) |
+| `PGB_LOGO_FILE` | `/app/data/branding-logo` | path penyimpanan file logo kustom yang diupload lewat menu Branding |
 
 ## Menjalankan
 
@@ -105,6 +107,16 @@ go run ./cmd/server
 - `GET /api/config-edit/raw` — baca seluruh isi ini sebagai sections
 - `POST /api/config-edit/database-field` `{"database","field","value"}` — edit ini + auto RELOAD
 - `POST /api/config-edit/global-field` `{"field","value"}` — edit ini + auto RELOAD
+- `GET /api/branding` `/api/branding/logo` — identitas aplikasi & logo (publik, dibaca sebelum login)
+- `PUT /api/branding` `{"company_name","app_name","app_sub"}` — admin only
+- `POST /api/branding/logo` (multipart `logo`, maks 2MB) `/ DELETE /api/branding/logo` — admin only
+
+## Kustomisasi Identitas Aplikasi (Branding)
+
+Menu **Branding** (admin only) memungkinkan mengganti nama aplikasi, sub-judul, nama perusahaan/organisasi
+di footer, dan logo (menggantikan icon ◈ default) — tampil di sidebar, halaman login, dan tab browser.
+Semua pengaturan ini disimpan di `PGB_BRANDING_FILE`/`PGB_LOGO_FILE` dan persisten lintas restart container
+selama folder `/app/data` dipasang sebagai volume.
 
 ## Menjalankan dengan Docker (PgBouncer di server terpisah)
 

@@ -6,7 +6,7 @@ const M: Record<string, Record<string,string>> = {
     dashboard:'Dashboard', pools:'Pools', clients:'Clients', servers:'Servers',
     stats:'Stats', databases:'Databases', configuration:'Konfigurasi',
     manage_servers:'Kelola Server', users:'Pengguna', audit_log:'Audit Log',
-    backup:'Backup & Restore',
+    backup:'Backup & Restore', branding:'Branding',
     // Auth
     login:'Masuk', logout:'Keluar', change_password:'Ganti Password',
     old_password:'Password Lama', new_password:'Password Baru',
@@ -87,13 +87,22 @@ const M: Record<string, Record<string,string>> = {
     close_needed:'Perlu Ditutup', changeable:'Bisa Diubah', description:'Deskripsi',
     pause_all:'Pause Semua', resume_all:'Resume Semua',
     key:'Key', value:'Nilai',
+    // Branding
+    branding_identity:'Identitas Aplikasi', branding_identity_hint:'Nama aplikasi dan organisasi ini tampil di halaman login, sidebar, dan footer.',
+    app_name:'Nama Aplikasi', app_sub:'Sub-judul', company_name:'Nama Perusahaan / Organisasi',
+    company_name_placeholder:'mis. PT. Nama Perusahaan Anda',
+    logo:'Logo', logo_hint:'Format PNG, JPEG, WEBP, atau SVG. Maksimal 2MB. Tampil di sidebar, halaman login, dan tab browser.',
+    logo_active:'Logo kustom aktif', logo_default:'Memakai icon default (◈)',
+    upload:'Upload', reset_logo:'Reset ke Default', choose_file_first:'Pilih file logo dulu',
+    confirm_reset_logo:'Hapus logo kustom dan kembali ke icon default?',
+    branding_saved:'Identitas aplikasi disimpan', logo_uploaded:'Logo berhasil diupload', logo_reset:'Logo direset ke default',
   },
   en: {
     // Navigation
     dashboard:'Dashboard', pools:'Pools', clients:'Clients', servers:'Servers',
     stats:'Stats', databases:'Databases', configuration:'Configuration',
     manage_servers:'Manage Servers', users:'Users', audit_log:'Audit Log',
-    backup:'Backup & Restore',
+    backup:'Backup & Restore', branding:'Branding',
     // Auth
     login:'Login', logout:'Logout', change_password:'Change Password',
     old_password:'Old Password', new_password:'New Password',
@@ -174,6 +183,15 @@ const M: Record<string, Record<string,string>> = {
     close_needed:'Close Needed', changeable:'Changeable', description:'Description',
     pause_all:'Pause All', resume_all:'Resume All',
     key:'Key', value:'Value',
+    // Branding
+    branding_identity:'Application Identity', branding_identity_hint:'This app and organization name appears on the login page, sidebar, and footer.',
+    app_name:'App Name', app_sub:'Subtitle', company_name:'Company / Organization Name',
+    company_name_placeholder:'e.g. PT. Nama Perusahaan Anda',
+    logo:'Logo', logo_hint:'PNG, JPEG, WEBP, or SVG format. Max 2MB. Shown in the sidebar, login page, and browser tab.',
+    logo_active:'Custom logo active', logo_default:'Using default icon (◈)',
+    upload:'Upload', reset_logo:'Reset to Default', choose_file_first:'Choose a logo file first',
+    confirm_reset_logo:'Remove the custom logo and revert to the default icon?',
+    branding_saved:'Application identity saved', logo_uploaded:'Logo uploaded successfully', logo_reset:'Logo reset to default',
   }
 }
 export function useI18n() {

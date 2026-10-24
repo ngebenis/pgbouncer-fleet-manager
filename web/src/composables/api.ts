@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { RowsResponse, StatusResponse, VersionResponse, ActionResponse, RawConfigResponse, ServersListResponse } from '../types/api'
+import type { RowsResponse, StatusResponse, VersionResponse, ActionResponse, RawConfigResponse, ServersListResponse, BrandingConfig } from '../types/api'
 const http = axios.create({ baseURL: '/api', timeout: 10000 })
 http.interceptors.request.use(cfg => {
   const token = localStorage.getItem('pgbm_token')
@@ -32,6 +32,14 @@ export const api = {
     return http.post<ActionResponse>('/restore', fd).then(r => r.data)
   },
   getAlerts: () => http.get<any>('/alerts').then(r => r.data),
+  getBranding: () => http.get<BrandingConfig>('/branding').then(r => r.data),
+  setBranding: (data: {company_name:string;app_name:string;app_sub:string}) =>
+    http.put<ActionResponse>('/branding', data).then(r => r.data),
+  uploadBrandingLogo: (file: File) => {
+    const fd = new FormData(); fd.append('logo', file)
+    return http.post<ActionResponse>('/branding/logo', fd).then(r => r.data)
+  },
+  resetBrandingLogo: () => http.delete<ActionResponse>('/branding/logo').then(r => r.data),
   getSSHPubKey: () => http.get<{public_key:string;key_path:string}>('/ssh-pubkey').then(r => r.data),
   setAlerts: (cfg: any) => http.put<ActionResponse>('/alerts', cfg).then(r => r.data),
   getServiceStatus: (s:string) => http.get<StatusResponse>('/status', q(s)).then(r => r.data),

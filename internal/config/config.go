@@ -6,6 +6,7 @@ type Config struct {
 	ControlMode, SSHHost, SSHPort, SSHUser, SSHPrivateKey string
 	SSHUseSudo bool
 	ListenAddr, ServersFile, UsersFile, AuditFile, AlertsFile, SessionsFile string
+	BrandingFile, LogoFile string
 }
 func Load() *Config {
 	return &Config{
@@ -28,6 +29,8 @@ func Load() *Config {
 		AuditFile:     getenv("PGB_AUDIT_FILE", "/app/data/audit.json"),
 		AlertsFile:    getenv("PGB_ALERTS_FILE", "/app/data/alerts.json"),
 		SessionsFile:  getenv("PGB_SESSIONS_FILE", "/app/data/sessions.json"),
+		BrandingFile:  getenv("PGB_BRANDING_FILE", "/app/data/branding.json"),
+		LogoFile:      getenv("PGB_LOGO_FILE", "/app/data/branding-logo"),
 	}
 }
 func getenv(key, fallback string) string {

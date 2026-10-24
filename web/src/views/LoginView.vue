@@ -2,9 +2,11 @@
 import { ref } from 'vue'
 import { api } from '../composables/api'
 import { useAuthStore } from '../stores/auth'
+import { useBranding } from '../stores/branding'
 import { useI18n } from '../i18n'
 const { t } = useI18n()
 const auth = useAuthStore()
+const { branding, logoUrl } = useBranding()
 const username = ref(''); const password = ref(''); const error = ref(''); const loading = ref(false)
 const emit = defineEmits<{(e:'logged-in'):void}>()
 async function login() {
@@ -21,14 +23,15 @@ async function login() {
   <div class="login-wrap">
     <div class="login-card">
       <div class="login-logo">
-        <span style="font-size:1.6rem;color:var(--accent)">◈</span>
-        <div><div style="font-size:1.1rem;font-weight:700">PgBouncer</div><div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim)">Manager</div></div>
+        <img v-if="logoUrl" :src="logoUrl" alt="logo" style="width:1.8rem;height:1.8rem;object-fit:contain" />
+        <span v-else style="font-size:1.6rem;color:var(--accent)">◈</span>
+        <div><div style="font-size:1.1rem;font-weight:700">{{ branding.app_name }}</div><div style="font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim)">{{ branding.app_sub }}</div></div>
       </div>
       <div class="lf"><label>{{ t('username') }}</label><input v-model="username" class="input" type="text" @keyup.enter="login" autofocus /></div>
       <div class="lf"><label>{{ t('password') }}</label><input v-model="password" class="input" type="password" @keyup.enter="login" /></div>
       <p v-if="error" class="err-text">{{ error }}</p>
       <button class="btn btn-ok" style="width:100%;padding:.6rem" :disabled="loading" @click="login">{{ loading ? t('loading') : t('login') }}</button>
-      <p style="text-align:center;font-size:.75rem;color:var(--text-muted)"></p>
+      <p v-if="branding.company_name" style="text-align:center;font-size:.75rem;color:var(--text-muted)">{{ branding.company_name }}</p>
     </div>
   </div>
 </template>
