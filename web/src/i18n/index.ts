@@ -129,6 +129,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'Hapus logo kustom dan kembali ke icon default?',
     branding_saved:'Identitas aplikasi disimpan', logo_uploaded:'Logo berhasil diupload', logo_reset:'Logo direset ke default',
     menu:'Menu', server_section:'Server', status_inactive:'Nonaktif', status_failed:'Gagal', status_unknown:'Tidak diketahui',
+    view_only:'hanya lihat', admin_only:'khusus admin',
   },
   en: {
     // Navigation
@@ -226,6 +227,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'Remove the custom logo and revert to the default icon?',
     branding_saved:'Application identity saved', logo_uploaded:'Logo uploaded successfully', logo_reset:'Logo reset to default',
     menu:'Menu', server_section:'Server', status_inactive:'Inactive', status_failed:'Failed', status_unknown:'Unknown',
+    view_only:'view only', admin_only:'Admin only',
   },
   zh: {
     // Navigation
@@ -323,6 +325,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'删除自定义 Logo 并恢复为默认图标？',
     branding_saved:'应用身份标识已保存', logo_uploaded:'Logo 上传成功', logo_reset:'Logo 已重置为默认',
     menu:'菜单', server_section:'服务器', status_inactive:'未激活', status_failed:'失败', status_unknown:'未知',
+    view_only:'仅查看', admin_only:'仅限管理员',
   },
   hi: {
     // Navigation
@@ -420,6 +423,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'कस्टम लोगो हटाकर डिफ़ॉल्ट आइकन पर वापस जाएं?',
     branding_saved:'ऐप पहचान सेव हो गई', logo_uploaded:'लोगो सफलतापूर्वक अपलोड हो गया', logo_reset:'लोगो डिफ़ॉल्ट पर रीसेट हो गया',
     menu:'मेनू', server_section:'सर्वर', status_inactive:'निष्क्रिय', status_failed:'असफल', status_unknown:'अज्ञात',
+    view_only:'केवल देखने के लिए', admin_only:'केवल admin के लिए',
   },
   es: {
     // Navigation
@@ -517,6 +521,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'¿Eliminar el logo personalizado y volver al ícono por defecto?',
     branding_saved:'Identidad de la aplicación guardada', logo_uploaded:'Logo subido correctamente', logo_reset:'Logo restablecido al predeterminado',
     menu:'Menú', server_section:'Servidor', status_inactive:'Inactivo', status_failed:'Fallido', status_unknown:'Desconocido',
+    view_only:'solo lectura', admin_only:'Solo admin',
   },
   fr: {
     // Navigation
@@ -614,6 +619,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'Supprimer le logo personnalisé et revenir à l\'icône par défaut ?',
     branding_saved:'Identité de l\'application enregistrée', logo_uploaded:'Logo téléversé avec succès', logo_reset:'Logo réinitialisé par défaut',
     menu:'Menu', server_section:'Serveur', status_inactive:'Inactif', status_failed:'Échoué', status_unknown:'Inconnu',
+    view_only:'lecture seule', admin_only:'Admin uniquement',
   },
   pt: {
     // Navigation
@@ -711,6 +717,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'Remover o logo personalizado e voltar ao ícone padrão?',
     branding_saved:'Identidade do aplicativo salva', logo_uploaded:'Logo enviado com sucesso', logo_reset:'Logo redefinido para o padrão',
     menu:'Menu', server_section:'Servidor', status_inactive:'Inativo', status_failed:'Falhou', status_unknown:'Desconhecido',
+    view_only:'somente visualização', admin_only:'Somente admin',
   },
   ar: {
     // Navigation
@@ -808,6 +815,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'هل تريد حذف الشعار المخصص والعودة إلى الأيقونة الافتراضية؟',
     branding_saved:'تم حفظ هوية التطبيق', logo_uploaded:'تم رفع الشعار بنجاح', logo_reset:'تمت إعادة تعيين الشعار إلى الافتراضي',
     menu:'القائمة', server_section:'الخادم', status_inactive:'غير نشط', status_failed:'فشل', status_unknown:'غير معروف',
+    view_only:'للعرض فقط', admin_only:'للمسؤول فقط',
   },
   bn: {
     // Navigation
@@ -905,6 +913,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'কাস্টম লোগো মুছে ডিফল্ট আইকনে ফিরে যাবেন?',
     branding_saved:'অ্যাপের পরিচয় সংরক্ষিত হয়েছে', logo_uploaded:'লোগো সফলভাবে আপলোড হয়েছে', logo_reset:'লোগো ডিফল্টে রিসেট হয়েছে',
     menu:'মেনু', server_section:'সার্ভার', status_inactive:'নিষ্ক্রিয়', status_failed:'ব্যর্থ', status_unknown:'অজানা',
+    view_only:'শুধু দেখার জন্য', admin_only:'শুধুমাত্র admin',
   },
   ru: {
     // Navigation
@@ -1002,6 +1011,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'Удалить пользовательский логотип и вернуться к стандартной иконке?',
     branding_saved:'Идентичность приложения сохранена', logo_uploaded:'Логотип успешно загружен', logo_reset:'Логотип сброшен к стандартному',
     menu:'Меню', server_section:'Сервер', status_inactive:'Неактивен', status_failed:'Сбой', status_unknown:'Неизвестно',
+    view_only:'только просмотр', admin_only:'Только admin',
   },
   th: {
     dashboard:'แดชบอร์ด', pools:'Pools', clients:'ไคลเอนต์', servers:'เซิร์ฟเวอร์',
@@ -1081,6 +1091,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'ลบโลโก้ที่กำหนดเองและกลับไปใช้ไอคอนเริ่มต้น?',
     branding_saved:'บันทึกข้อมูลแบรนด์แอปแล้ว', logo_uploaded:'อัปโหลดโลโก้สำเร็จ', logo_reset:'รีเซ็ตโลโก้เป็นค่าเริ่มต้นแล้ว',
     menu:'เมนู', server_section:'เซิร์ฟเวอร์', status_inactive:'ไม่ทำงาน', status_failed:'ล้มเหลว', status_unknown:'ไม่ทราบ',
+    view_only:'ดูอย่างเดียว', admin_only:'สำหรับ admin เท่านั้น',
   },
   vi: {
     dashboard:'Dashboard', pools:'Pools', clients:'Clients', servers:'Servers',
@@ -1160,6 +1171,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'Xóa logo tùy chỉnh và quay về icon mặc định?',
     branding_saved:'Đã lưu nhận diện ứng dụng', logo_uploaded:'Tải logo lên thành công', logo_reset:'Đã đặt lại logo về mặc định',
     menu:'Menu', server_section:'Server', status_inactive:'Không hoạt động', status_failed:'Thất bại', status_unknown:'Không xác định',
+    view_only:'chỉ xem', admin_only:'Chỉ dành cho admin',
   },
   ja: {
     dashboard:'ダッシュボード', pools:'Pools', clients:'クライアント', servers:'サーバー',
@@ -1239,6 +1251,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'カスタムロゴを削除してデフォルトアイコンに戻しますか？',
     branding_saved:'アプリのアイデンティティを保存しました', logo_uploaded:'ロゴのアップロードに成功しました', logo_reset:'ロゴをデフォルトにリセットしました',
     menu:'メニュー', server_section:'サーバー', status_inactive:'非アクティブ', status_failed:'失敗', status_unknown:'不明',
+    view_only:'閲覧のみ', admin_only:'管理者のみ',
   },
   ko: {
     dashboard:'Dashboard', pools:'Pools', clients:'클라이언트', servers:'서버',
@@ -1318,6 +1331,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'커스텀 로고를 삭제하고 기본 아이콘으로 되돌리시겠습니까?',
     branding_saved:'앱 아이덴티티가 저장되었습니다', logo_uploaded:'로고 업로드 성공', logo_reset:'로고가 기본값으로 재설정되었습니다',
     menu:'메뉴', server_section:'서버', status_inactive:'비활성', status_failed:'실패', status_unknown:'알 수 없음',
+    view_only:'보기 전용', admin_only:'관리자 전용',
   },
   pl: {
     dashboard:'Dashboard', pools:'Pools', clients:'Klienci', servers:'Serwery',
@@ -1397,6 +1411,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'Usunąć niestandardowe logo i wrócić do domyślnej ikony?',
     branding_saved:'Tożsamość aplikacji zapisana', logo_uploaded:'Logo przesłane pomyślnie', logo_reset:'Logo przywrócone do domyślnego',
     menu:'Menu', server_section:'Serwer', status_inactive:'Nieaktywny', status_failed:'Niepowodzenie', status_unknown:'Nieznany',
+    view_only:'tylko podgląd', admin_only:'Tylko admin',
   },
   it: {
     dashboard:'Dashboard', pools:'Pools', clients:'Client', servers:'Server',
@@ -1476,6 +1491,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'Rimuovere il logo personalizzato e tornare all\'icona predefinita?',
     branding_saved:'Identità dell\'app salvata', logo_uploaded:'Logo caricato con successo', logo_reset:'Logo ripristinato al predefinito',
     menu:'Menu', server_section:'Server', status_inactive:'Inattivo', status_failed:'Fallito', status_unknown:'Sconosciuto',
+    view_only:'sola lettura', admin_only:'Solo admin',
   },
   tr: {
     dashboard:'Dashboard', pools:'Pools', clients:'İstemciler', servers:'Sunucular',
@@ -1555,6 +1571,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'Özel logo silinip varsayılan simgeye dönülsün mü?',
     branding_saved:'Uygulama kimliği kaydedildi', logo_uploaded:'Logo başarıyla yüklendi', logo_reset:'Logo varsayılana sıfırlandı',
     menu:'Menü', server_section:'Sunucu', status_inactive:'Devre Dışı', status_failed:'Başarısız', status_unknown:'Bilinmiyor',
+    view_only:'salt okunur', admin_only:'Sadece admin',
   },
   uk: {
     dashboard:'Дашборд', pools:'Pools', clients:'Клієнти', servers:'Сервери',
@@ -1634,6 +1651,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'Видалити користувацький логотип і повернутися до стандартної іконки?',
     branding_saved:'Ідентичність застосунку збережено', logo_uploaded:'Логотип успішно завантажено', logo_reset:'Логотип скинуто до стандартного',
     menu:'Меню', server_section:'Сервер', status_inactive:'Неактивний', status_failed:'Збій', status_unknown:'Невідомо',
+    view_only:'лише перегляд', admin_only:'Лише admin',
   },
   de: {
     dashboard:'Dashboard', pools:'Pools', clients:'Clients', servers:'Server',
@@ -1713,6 +1731,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'Benutzerdefiniertes Logo entfernen und zum Standardsymbol zurückkehren?',
     branding_saved:'App-Identität gespeichert', logo_uploaded:'Logo erfolgreich hochgeladen', logo_reset:'Logo auf Standard zurückgesetzt',
     menu:'Menü', server_section:'Server', status_inactive:'Inaktiv', status_failed:'Fehlgeschlagen', status_unknown:'Unbekannt',
+    view_only:'nur Ansicht', admin_only:'Nur Admin',
   },
   nl: {
     dashboard:'Dashboard', pools:'Pools', clients:'Clients', servers:'Servers',
@@ -1792,6 +1811,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'Aangepast logo verwijderen en terugkeren naar het standaardpictogram?',
     branding_saved:'App-identiteit opgeslagen', logo_uploaded:'Logo succesvol geüpload', logo_reset:'Logo teruggezet naar standaard',
     menu:'Menu', server_section:'Server', status_inactive:'Inactief', status_failed:'Mislukt', status_unknown:'Onbekend',
+    view_only:'alleen bekijken', admin_only:'Alleen admin',
   },
   fa: {
     dashboard:'داشبورد', pools:'Pools', clients:'کلاینت‌ها', servers:'سرورها',
@@ -1871,6 +1891,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'لوگوی سفارشی حذف و به آیکون پیش‌فرض بازگردانده شود؟',
     branding_saved:'هویت برنامه ذخیره شد', logo_uploaded:'لوگو با موفقیت آپلود شد', logo_reset:'لوگو به پیش‌فرض بازنشانی شد',
     menu:'منو', server_section:'سرور', status_inactive:'غیرفعال', status_failed:'ناموفق', status_unknown:'نامشخص',
+    view_only:'فقط نمایش', admin_only:'فقط admin',
   },
   ta: {
     dashboard:'Dashboard', pools:'Pools', clients:'கிளையண்ட்கள்', servers:'சேவையகங்கள்',
@@ -1950,6 +1971,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'தனிப்பயன் லோகோவை நீக்கிவிட்டு இயல்புநிலை ஐகானுக்குத் திரும்பவா?',
     branding_saved:'பயன்பாட்டு அடையாளம் சேமிக்கப்பட்டது', logo_uploaded:'லோகோ வெற்றிகரமாக பதிவேற்றப்பட்டது', logo_reset:'லோகோ இயல்புநிலைக்கு மீட்டமைக்கப்பட்டது',
     menu:'மெனு', server_section:'சேவையகம்', status_inactive:'செயலற்றது', status_failed:'தோல்வி', status_unknown:'தெரியவில்லை',
+    view_only:'பார்வைக்கு மட்டும்', admin_only:'admin மட்டும்',
   },
   tl: {
     dashboard:'Dashboard', pools:'Pools', clients:'Clients', servers:'Servers',
@@ -2029,6 +2051,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'Alisin ang custom na logo at bumalik sa default na icon?',
     branding_saved:'Na-save ang identity ng app', logo_uploaded:'Matagumpay na na-upload ang logo', logo_reset:'Na-reset ang logo sa default',
     menu:'Menu', server_section:'Server', status_inactive:'Hindi Aktibo', status_failed:'Nabigo', status_unknown:'Hindi Alam',
+    view_only:'view only', admin_only:'Admin lang',
   },
   km: {
     dashboard:'ផ្ទាំងគ្រប់គ្រង', pools:'Pools', clients:'អតិថិជន', servers:'ម៉ាស៊ីនមេ',
@@ -2108,6 +2131,7 @@ const M: Record<string, Record<string,string>> = {
     confirm_reset_logo:'លុប logo ផ្ទាល់ខ្លួន ហើយត្រឡប់ទៅរូបតំណាងលំនាំដើម?',
     branding_saved:'បានរក្សាទុកអត្តសញ្ញាណកម្មវិធី', logo_uploaded:'បានបញ្ចូល logo ដោយជោគជ័យ', logo_reset:'Logo ត្រូវបានកំណត់ឡើងវិញទៅលំនាំដើម',
     menu:'ម៉ឺនុយ', server_section:'ម៉ាស៊ីនមេ', status_inactive:'អសកម្ម', status_failed:'បរាជ័យ', status_unknown:'មិនស្គាល់',
+    view_only:'សម្រាប់មើលតែប៉ុណ្ណោះ', admin_only:'admin តែប៉ុណ្ណោះ',
   }
 }
 export function useI18n() {

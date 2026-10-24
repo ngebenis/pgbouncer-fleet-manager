@@ -4,6 +4,7 @@ import { api } from '../composables/api'
 import { usePolling } from '../composables/usePolling'
 import { useToast } from '../composables/useToast'
 import { useServerStore } from '../stores/server'
+import { useAuthStore } from '../stores/auth'
 import { useI18n } from '../i18n'
 import MetricCard from '../components/MetricCard.vue'
 import RefreshBar from '../components/RefreshBar.vue'
@@ -11,6 +12,8 @@ import RefreshBar from '../components/RefreshBar.vue'
 const { activeId } = useServerStore()
 const toast = useToast()
 const { t } = useI18n()
+const auth = useAuthStore()
+const isAdmin = computed(() => auth.isAdmin.value)
 const sid = computed(() => activeId.value)
 const intervalMs = ref(5000)
 
@@ -30,6 +33,7 @@ const statusLabel = (s?:string) => s==='active'?t('active'):s==='inactive'?t('st
 const busy = ref<string|null>(null)
 
 async function runAction(action:'start'|'stop'|'restart'|'reload', confirmKey?:string) {
+  if (!isAdmin.value) return
   if (confirmKey && !window.confirm(t(confirmKey))) return
   busy.value = action
   try {
@@ -56,12 +60,13 @@ function togglePause() { const p=!status.paused.value; status.paused.value=p; po
             {{ statusLabel(status.data.value?.status) }}
           </span>
           <span v-if="version.data.value" class="muted" style="font-size:.72rem">· {{ version.data.value.version }}</span>
+          <span v-if="!isAdmin" class="badge badge-neutral" style="font-size:.65rem;margin-left:.25rem">{{ t('view_only') }}</span>
         </div>
         <div class="flex gap-2">
-          <button class="btn btn-ok btn-xs" :disabled="busy!==null" @click="runAction('start')">{{ busy==='start'?'...':t('start') }}</button>
-          <button class="btn btn-warn btn-xs" :disabled="busy!==null" @click="runAction('stop','confirm_stop')">{{ busy==='stop'?'...':t('stop') }}</button>
-          <button class="btn btn-danger btn-xs" :disabled="busy!==null" @click="runAction('restart','confirm_restart')">{{ busy==='restart'?'...':t('restart') }}</button>
-          <button class="btn btn-accent btn-xs" :disabled="busy!==null" @click="runAction('reload')">{{ busy==='reload'?'...':'↺ '+t('reload_config') }}</button>
+          <button class="btn btn-ok btn-xs" :disabled="busy!==null || !isAdmin" :title="!isAdmin?t('admin_only'):''" @click="runAction('start')">{{ busy==='start'?'...':t('start') }}</button>
+          <button class="btn btn-warn btn-xs" :disabled="busy!==null || !isAdmin" :title="!isAdmin?t('admin_only'):''" @click="runAction('stop','confirm_stop')">{{ busy==='stop'?'...':t('stop') }}</button>
+          <button class="btn btn-danger btn-xs" :disabled="busy!==null || !isAdmin" :title="!isAdmin?t('admin_only'):''" @click="runAction('restart','confirm_restart')">{{ busy==='restart'?'...':t('restart') }}</button>
+          <button class="btn btn-accent btn-xs" :disabled="busy!==null || !isAdmin" :title="!isAdmin?t('admin_only'):''" @click="runAction('reload')">{{ busy==='reload'?'...':'↺ '+t('reload_config') }}</button>
         </div>
       </div>
     </div>
