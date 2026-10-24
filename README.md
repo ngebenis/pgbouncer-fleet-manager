@@ -1,5 +1,7 @@
 # PgBouncer Manager
 
+*[English](README.en.md)*
+
 Web GUI ringan untuk monitor & kontrol PgBouncer: status pools/clients/servers/stats,
 start/stop/restart service, reload config, pause/resume, dan ganti pool_mode per database.
 
@@ -177,7 +179,7 @@ stats, start/stop/restart via SSH, reload config).
   bisa akses systemd lokal — lihat bagian "Setup sudoers" di atas.
 
 - Selalu jalankan di belakang VPN/reverse proxy dengan TLS, jangan ekspos langsung ke internet.
-- `PGB_UI_USER`/`PGB_UI_PASS` adalah proteksi minimal — untuk produksi pertimbangkan ganti
-  dengan session-based auth + role (read-only vs admin) seperti yang sudah dipakai di
-  PGHBA Manager Anda.
+- `PGB_UI_USER`/`PGB_UI_PASS` hanya proteksi minimal di depan aplikasi. Login sendiri sudah
+  memakai session-based auth dengan role (admin vs viewer, lihat menu **Pengguna**) — pastikan
+  password akun `admin` default sudah diganti segera setelah deploy pertama kali.
 - File `.bak` otomatis dibuat sebelum setiap penulisan `pgbouncer.ini`.
