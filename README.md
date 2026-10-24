@@ -1,6 +1,6 @@
 # PgBouncer Manager
 
-*[English](README.en.md)*
+*[English](README.en.md) · [中文](README.zh.md) · [हिन्दी](README.hi.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md)*
 
 Web GUI ringan untuk monitor & kontrol PgBouncer: status pools/clients/servers/stats,
 start/stop/restart service, reload config, pause/resume, dan ganti pool_mode per database.
