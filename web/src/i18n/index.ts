@@ -6,7 +6,7 @@ const M: Record<string, Record<string,string>> = {
     dashboard:'Dashboard', pools:'Pools', clients:'Clients', servers:'Servers',
     stats:'Stats', databases:'Databases', configuration:'Konfigurasi',
     manage_servers:'Kelola Server', users:'Pengguna', audit_log:'Audit Log',
-    backup:'Backup & Restore', branding:'Branding',
+    backup:'Backup & Restore', branding:'Identitas',
     // Auth
     login:'Masuk', logout:'Keluar', change_password:'Ganti Password',
     old_password:'Password Lama', new_password:'Password Baru',
@@ -102,7 +102,7 @@ const M: Record<string, Record<string,string>> = {
     dashboard:'Dashboard', pools:'Pools', clients:'Clients', servers:'Servers',
     stats:'Stats', databases:'Databases', configuration:'Configuration',
     manage_servers:'Manage Servers', users:'Users', audit_log:'Audit Log',
-    backup:'Backup & Restore', branding:'Branding',
+    backup:'Backup & Restore', branding:'Identity',
     // Auth
     login:'Login', logout:'Logout', change_password:'Change Password',
     old_password:'Old Password', new_password:'New Password',
