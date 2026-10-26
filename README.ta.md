@@ -6,6 +6,28 @@ PgBouncer-ஐ கண்காணிக்கவும் கட்டுப்�
 நிலையைக் காண்பது, சேவையை start/stop/restart செய்வது, கட்டமைப்பை reload செய்வது, pause/resume
 செய்வது, மற்றும் ஒவ்வொரு தரவுத்தளத்திற்கும் pool_mode-ஐ மாற்றுவது.
 
+## ஸ்கிரீன்ஷாட்கள்
+
+| உள்நுழைய | Dashboard | Pools |
+|---|---|---|
+| ![உள்நுழைய](docs/screenshots/00-login.png) | ![Dashboard](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| கிளையண்ட்கள் | சேவையகங்கள் | புள்ளிவிவரங்கள் |
+|---|---|---|
+| ![கிளையண்ட்கள்](docs/screenshots/03-clients.png) | ![சேவையகங்கள்](docs/screenshots/04-servers.png) | ![புள்ளிவிவரங்கள்](docs/screenshots/05-stats.png) |
+
+| தரவுத்தளங்கள் | கட்டமைப்பு | சேவையகங்களை நிர்வகிக்கவும் |
+|---|---|---|
+| ![தரவுத்தளங்கள்](docs/screenshots/06-databases.png) | ![கட்டமைப்பு](docs/screenshots/07-configuration.png) | ![சேவையகங்களை நிர்வகிக்கவும்](docs/screenshots/08-manage-servers.png) |
+
+| பயனர்கள் | தணிக்கை பதிவு | காப்பு & மீட்டமைப்பு |
+|---|---|---|
+| ![பயனர்கள்](docs/screenshots/09-users.png) | ![தணிக்கை பதிவு](docs/screenshots/10-audit-log.png) | ![காப்பு & மீட்டமைப்பு](docs/screenshots/11-backup-restore.png) |
+
+| அடையாளம் |
+|---|
+| ![அடையாளம்](docs/screenshots/12-identity.png) |
+
 ## தொழில்நுட்ப அடுக்கு
 - Backend: Go + Gin + pgx (Postgres நெறிமுறை வழியாக நேரடியாக PgBouncer நிர்வாக கன்சோலுடன் இணைகிறது)
 - Frontend: Vue 3 + TypeScript + Vite (`web/` கோப்புறையில் ஏற்கனவே உள்ளது)

@@ -6,6 +6,28 @@ PgBouncer'ı izlemek ve kontrol etmek için hafif bir web arayüzü: pools/clien
 durumu, servisi başlatma/durdurma/yeniden başlatma, yapılandırmayı yeniden yükleme, duraklat/
 devam ettir ve veritabanı başına pool_mode değiştirme.
 
+## Ekran Görüntüleri
+
+| Giriş | Dashboard | Pools |
+|---|---|---|
+| ![Giriş](docs/screenshots/00-login.png) | ![Dashboard](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| İstemciler | Sunucular | İstatistikler |
+|---|---|---|
+| ![İstemciler](docs/screenshots/03-clients.png) | ![Sunucular](docs/screenshots/04-servers.png) | ![İstatistikler](docs/screenshots/05-stats.png) |
+
+| Veritabanları | Yapılandırma | Sunucuları Yönet |
+|---|---|---|
+| ![Veritabanları](docs/screenshots/06-databases.png) | ![Yapılandırma](docs/screenshots/07-configuration.png) | ![Sunucuları Yönet](docs/screenshots/08-manage-servers.png) |
+
+| Kullanıcılar | Denetim Günlüğü | Yedekleme ve Geri Yükleme |
+|---|---|---|
+| ![Kullanıcılar](docs/screenshots/09-users.png) | ![Denetim Günlüğü](docs/screenshots/10-audit-log.png) | ![Yedekleme ve Geri Yükleme](docs/screenshots/11-backup-restore.png) |
+
+| Kimlik |
+|---|
+| ![Kimlik](docs/screenshots/12-identity.png) |
+
 ## Teknoloji Yığını
 - Backend: Go + Gin + pgx (Postgres protokolü üzerinden doğrudan PgBouncer yönetim konsoluna bağlanır)
 - Frontend: Vue 3 + TypeScript + Vite (`web/` klasöründe zaten mevcut)

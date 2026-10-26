@@ -6,6 +6,28 @@
 restart کردن سرویس، reload کردن تنظیمات، pause/resume کردن، و تغییر pool_mode به ازای هر پایگاه
 داده.
 
+## تصاویر صفحه
+
+| ورود | داشبورد | Pools |
+|---|---|---|
+| ![ورود](docs/screenshots/00-login.png) | ![داشبورد](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| کلاینت‌ها | سرورها | آمار |
+|---|---|---|
+| ![کلاینت‌ها](docs/screenshots/03-clients.png) | ![سرورها](docs/screenshots/04-servers.png) | ![آمار](docs/screenshots/05-stats.png) |
+
+| پایگاه‌های داده | پیکربندی | مدیریت سرورها |
+|---|---|---|
+| ![پایگاه‌های داده](docs/screenshots/06-databases.png) | ![پیکربندی](docs/screenshots/07-configuration.png) | ![مدیریت سرورها](docs/screenshots/08-manage-servers.png) |
+
+| کاربران | گزارش ممیزی | پشتیبان‌گیری و بازیابی |
+|---|---|---|
+| ![کاربران](docs/screenshots/09-users.png) | ![گزارش ممیزی](docs/screenshots/10-audit-log.png) | ![پشتیبان‌گیری و بازیابی](docs/screenshots/11-backup-restore.png) |
+
+| هویت |
+|---|
+| ![هویت](docs/screenshots/12-identity.png) |
+
 ## پشته فناوری
 - بک‌اند: Go + Gin + pgx (اتصال مستقیم به کنسول مدیریتی PgBouncer از طریق پروتکل Postgres)
 - فرانت‌اند: Vue 3 + TypeScript + Vite (از قبل در پوشه `web/` موجود است)

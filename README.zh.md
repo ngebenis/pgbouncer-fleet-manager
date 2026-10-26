@@ -5,6 +5,28 @@
 一个轻量级的 PgBouncer 监控与控制 Web 界面：查看 pools/clients/servers/stats 状态、
 启动/停止/重启服务、重新加载配置、暂停/恢复连接，以及按数据库修改 pool_mode。
 
+## 截图
+
+| 登录 | 仪表盘 | Pools |
+|---|---|---|
+| ![登录](docs/screenshots/00-login.png) | ![仪表盘](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| 客户端 | 服务器 | 统计 |
+|---|---|---|
+| ![客户端](docs/screenshots/03-clients.png) | ![服务器](docs/screenshots/04-servers.png) | ![统计](docs/screenshots/05-stats.png) |
+
+| 数据库 | 配置 | 管理服务器 |
+|---|---|---|
+| ![数据库](docs/screenshots/06-databases.png) | ![配置](docs/screenshots/07-configuration.png) | ![管理服务器](docs/screenshots/08-manage-servers.png) |
+
+| 用户 | 审计日志 | 备份与恢复 |
+|---|---|---|
+| ![用户](docs/screenshots/09-users.png) | ![审计日志](docs/screenshots/10-audit-log.png) | ![备份与恢复](docs/screenshots/11-backup-restore.png) |
+
+| 身份标识 |
+|---|
+| ![身份标识](docs/screenshots/12-identity.png) |
+
 ## 技术栈
 - 后端：Go + Gin + pgx（通过 Postgres 协议直接连接 PgBouncer 管理控制台）
 - 前端：Vue 3 + TypeScript + Vite（已在 `web/` 目录中）

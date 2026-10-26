@@ -6,6 +6,28 @@ PgBouncer를 모니터링하고 제어하기 위한 가벼운 웹 GUI입니다: 
 확인, 서비스 start/stop/restart, 설정 reload, pause/resume, 데이터베이스별 pool_mode 변경 등을
 제공합니다.
 
+## 스크린샷
+
+| 로그인 | Dashboard | Pools |
+|---|---|---|
+| ![로그인](docs/screenshots/00-login.png) | ![Dashboard](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| 클라이언트 | 서버 | 통계 |
+|---|---|---|
+| ![클라이언트](docs/screenshots/03-clients.png) | ![서버](docs/screenshots/04-servers.png) | ![통계](docs/screenshots/05-stats.png) |
+
+| 데이터베이스 | 설정 | 서버 관리 |
+|---|---|---|
+| ![데이터베이스](docs/screenshots/06-databases.png) | ![설정](docs/screenshots/07-configuration.png) | ![서버 관리](docs/screenshots/08-manage-servers.png) |
+
+| 사용자 | 감사 로그 | 백업 및 복원 |
+|---|---|---|
+| ![사용자](docs/screenshots/09-users.png) | ![감사 로그](docs/screenshots/10-audit-log.png) | ![백업 및 복원](docs/screenshots/11-backup-restore.png) |
+
+| 아이덴티티 |
+|---|
+| ![아이덴티티](docs/screenshots/12-identity.png) |
+
 ## 기술 스택
 - 백엔드: Go + Gin + pgx (Postgres 프로토콜을 통해 PgBouncer 관리 콘솔에 직접 연결)
 - 프론트엔드: Vue 3 + TypeScript + Vite (`web/` 폴더에 이미 포함되어 있음)

@@ -6,6 +6,28 @@ Giao diện web nhẹ để giám sát & điều khiển PgBouncer: trạng thá
 start/stop/restart service, reload cấu hình, pause/resume, và thay đổi pool_mode theo từng
 cơ sở dữ liệu.
 
+## Ảnh chụp màn hình
+
+| Đăng nhập | Dashboard | Pools |
+|---|---|---|
+| ![Đăng nhập](docs/screenshots/00-login.png) | ![Dashboard](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| Clients | Servers | Thống kê |
+|---|---|---|
+| ![Clients](docs/screenshots/03-clients.png) | ![Servers](docs/screenshots/04-servers.png) | ![Thống kê](docs/screenshots/05-stats.png) |
+
+| Cơ sở dữ liệu | Cấu hình | Quản lý Server |
+|---|---|---|
+| ![Cơ sở dữ liệu](docs/screenshots/06-databases.png) | ![Cấu hình](docs/screenshots/07-configuration.png) | ![Quản lý Server](docs/screenshots/08-manage-servers.png) |
+
+| Người dùng | Nhật ký Kiểm tra | Sao lưu & Khôi phục |
+|---|---|---|
+| ![Người dùng](docs/screenshots/09-users.png) | ![Nhật ký Kiểm tra](docs/screenshots/10-audit-log.png) | ![Sao lưu & Khôi phục](docs/screenshots/11-backup-restore.png) |
+
+| Nhận diện |
+|---|
+| ![Nhận diện](docs/screenshots/12-identity.png) |
+
 ## Công nghệ sử dụng
 - Backend: Go + Gin + pgx (kết nối trực tiếp đến admin console của PgBouncer qua giao thức Postgres)
 - Frontend: Vue 3 + TypeScript + Vite (đã có sẵn trong thư mục `web/`)

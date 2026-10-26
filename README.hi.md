@@ -6,6 +6,28 @@ PgBouncer की निगरानी और नियंत्रण के �
 स्थिति देखना, सर्विस को start/stop/restart करना, config reload करना, पॉज़/रिज़्यूम करना, और
 हर डेटाबेस के लिए pool_mode बदलना।
 
+## स्क्रीनशॉट
+
+| लॉगिन | Dashboard | Pools |
+|---|---|---|
+| ![लॉगिन](docs/screenshots/00-login.png) | ![Dashboard](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| Clients | Servers | Stats |
+|---|---|---|
+| ![Clients](docs/screenshots/03-clients.png) | ![Servers](docs/screenshots/04-servers.png) | ![Stats](docs/screenshots/05-stats.png) |
+
+| Databases | कॉन्फ़िगरेशन | सर्वर प्रबंधित करें |
+|---|---|---|
+| ![Databases](docs/screenshots/06-databases.png) | ![कॉन्फ़िगरेशन](docs/screenshots/07-configuration.png) | ![सर्वर प्रबंधित करें](docs/screenshots/08-manage-servers.png) |
+
+| उपयोगकर्ता | Audit Log | बैकअप और रीस्टोर |
+|---|---|---|
+| ![उपयोगकर्ता](docs/screenshots/09-users.png) | ![Audit Log](docs/screenshots/10-audit-log.png) | ![बैकअप और रीस्टोर](docs/screenshots/11-backup-restore.png) |
+
+| पहचान |
+|---|
+| ![पहचान](docs/screenshots/12-identity.png) |
+
 ## स्टैक
 - बैकएंड: Go + Gin + pgx (Postgres प्रोटोकॉल के ज़रिए सीधे PgBouncer admin console से कनेक्ट होता है)
 - फ्रंटएंड: Vue 3 + TypeScript + Vite (पहले से `web/` फ़ोल्डर में मौजूद है)

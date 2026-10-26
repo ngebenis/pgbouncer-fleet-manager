@@ -5,6 +5,28 @@
 เว็บ GUI น้ำหนักเบาสำหรับตรวจสอบและควบคุม PgBouncer: ดูสถานะ pools/clients/servers/stats,
 start/stop/restart เซอร์วิส, reload การตั้งค่า, pause/resume, และเปลี่ยน pool_mode ต่อฐานข้อมูล
 
+## ภาพหน้าจอ
+
+| เข้าสู่ระบบ | แดชบอร์ด | Pools |
+|---|---|---|
+| ![เข้าสู่ระบบ](docs/screenshots/00-login.png) | ![แดชบอร์ด](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| ไคลเอนต์ | เซิร์ฟเวอร์ | สถิติ |
+|---|---|---|
+| ![ไคลเอนต์](docs/screenshots/03-clients.png) | ![เซิร์ฟเวอร์](docs/screenshots/04-servers.png) | ![สถิติ](docs/screenshots/05-stats.png) |
+
+| ฐานข้อมูล | การตั้งค่า | จัดการเซิร์ฟเวอร์ |
+|---|---|---|
+| ![ฐานข้อมูล](docs/screenshots/06-databases.png) | ![การตั้งค่า](docs/screenshots/07-configuration.png) | ![จัดการเซิร์ฟเวอร์](docs/screenshots/08-manage-servers.png) |
+
+| ผู้ใช้งาน | บันทึกตรวจสอบ | สำรองข้อมูล & กู้คืน |
+|---|---|---|
+| ![ผู้ใช้งาน](docs/screenshots/09-users.png) | ![บันทึกตรวจสอบ](docs/screenshots/10-audit-log.png) | ![สำรองข้อมูล & กู้คืน](docs/screenshots/11-backup-restore.png) |
+
+| ข้อมูลแบรนด์ |
+|---|
+| ![ข้อมูลแบรนด์](docs/screenshots/12-identity.png) |
+
 ## สแตกเทคโนโลยี
 - Backend: Go + Gin + pgx (เชื่อมต่อโดยตรงกับ admin console ของ PgBouncer ผ่านโปรโตคอล Postgres)
 - Frontend: Vue 3 + TypeScript + Vite (มีอยู่แล้วในโฟลเดอร์ `web/`)

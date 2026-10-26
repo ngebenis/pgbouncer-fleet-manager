@@ -6,6 +6,28 @@ PgBouncer মনিটর ও নিয়ন্ত্রণের জন্য 
 অবস্থা দেখা, সার্ভিস start/stop/restart করা, কনফিগ reload করা, pause/resume করা, এবং প্রতিটি
 ডেটাবেসের জন্য pool_mode পরিবর্তন করা।
 
+## স্ক্রিনশট
+
+| লগইন | Dashboard | Pools |
+|---|---|---|
+| ![লগইন](docs/screenshots/00-login.png) | ![Dashboard](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| ক্লায়েন্ট | সার্ভার | পরিসংখ্যান |
+|---|---|---|
+| ![ক্লায়েন্ট](docs/screenshots/03-clients.png) | ![সার্ভার](docs/screenshots/04-servers.png) | ![পরিসংখ্যান](docs/screenshots/05-stats.png) |
+
+| ডেটাবেস | কনফিগারেশন | সার্ভার ম্যানেজ করুন |
+|---|---|---|
+| ![ডেটাবেস](docs/screenshots/06-databases.png) | ![কনফিগারেশন](docs/screenshots/07-configuration.png) | ![সার্ভার ম্যানেজ করুন](docs/screenshots/08-manage-servers.png) |
+
+| ব্যবহারকারী | অডিট লগ | ব্যাকআপ ও রিস্টোর |
+|---|---|---|
+| ![ব্যবহারকারী](docs/screenshots/09-users.png) | ![অডিট লগ](docs/screenshots/10-audit-log.png) | ![ব্যাকআপ ও রিস্টোর](docs/screenshots/11-backup-restore.png) |
+
+| পরিচয় |
+|---|
+| ![পরিচয়](docs/screenshots/12-identity.png) |
+
 ## স্ট্যাক
 - Backend: Go + Gin + pgx (Postgres প্রোটোকলের মাধ্যমে সরাসরি PgBouncer admin console-এর সাথে সংযুক্ত হয়)
 - Frontend: Vue 3 + TypeScript + Vite (ইতিমধ্যে `web/` ফোল্ডারে আছে)

@@ -6,6 +6,28 @@
 запуск/зупинка/перезапуск сервісу, перезавантаження конфігурації, пауза/відновлення та зміна
 pool_mode для кожної бази даних.
 
+## Знімки екрана
+
+| Вхід | Дашборд | Pools |
+|---|---|---|
+| ![Вхід](docs/screenshots/00-login.png) | ![Дашборд](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| Клієнти | Сервери | Статистика |
+|---|---|---|
+| ![Клієнти](docs/screenshots/03-clients.png) | ![Сервери](docs/screenshots/04-servers.png) | ![Статистика](docs/screenshots/05-stats.png) |
+
+| Бази даних | Конфігурація | Керування Серверами |
+|---|---|---|
+| ![Бази даних](docs/screenshots/06-databases.png) | ![Конфігурація](docs/screenshots/07-configuration.png) | ![Керування Серверами](docs/screenshots/08-manage-servers.png) |
+
+| Користувачі | Журнал Аудиту | Резервне Копіювання |
+|---|---|---|
+| ![Користувачі](docs/screenshots/09-users.png) | ![Журнал Аудиту](docs/screenshots/10-audit-log.png) | ![Резервне Копіювання](docs/screenshots/11-backup-restore.png) |
+
+| Ідентичність |
+|---|
+| ![Ідентичність](docs/screenshots/12-identity.png) |
+
 ## Стек технологій
 - Backend: Go + Gin + pgx (підключається напряму до консолі адміністрування PgBouncer через протокол Postgres)
 - Frontend: Vue 3 + TypeScript + Vite (вже міститься в папці `web/`)

@@ -6,6 +6,28 @@ Un'interfaccia web leggera per monitorare e controllare PgBouncer: stato di pool
 stats, avvio/arresto/riavvio del servizio, ricarica della configurazione, pausa/ripresa, e
 modifica del pool_mode per database.
 
+## Screenshot
+
+| Accesso | Dashboard | Pools |
+|---|---|---|
+| ![Accesso](docs/screenshots/00-login.png) | ![Dashboard](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| Client | Server | Statistiche |
+|---|---|---|
+| ![Client](docs/screenshots/03-clients.png) | ![Server](docs/screenshots/04-servers.png) | ![Statistiche](docs/screenshots/05-stats.png) |
+
+| Database | Configurazione | Gestisci Server |
+|---|---|---|
+| ![Database](docs/screenshots/06-databases.png) | ![Configurazione](docs/screenshots/07-configuration.png) | ![Gestisci Server](docs/screenshots/08-manage-servers.png) |
+
+| Utenti | Registro di Controllo | Backup e Ripristino |
+|---|---|---|
+| ![Utenti](docs/screenshots/09-users.png) | ![Registro di Controllo](docs/screenshots/10-audit-log.png) | ![Backup e Ripristino](docs/screenshots/11-backup-restore.png) |
+
+| Identità |
+|---|
+| ![Identità](docs/screenshots/12-identity.png) |
+
 ## Stack
 - Backend: Go + Gin + pgx (si connette direttamente alla console di amministrazione di PgBouncer tramite il protocollo Postgres)
 - Frontend: Vue 3 + TypeScript + Vite (già presente nella cartella `web/`)

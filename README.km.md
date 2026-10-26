@@ -6,6 +6,28 @@ Web GUI ស្រាលមួយសម្រាប់ត្រួតពិនិ
 start/stop/restart សេវាកម្ម, reload ការកំណត់រចនាសម្ព័ន្ធ, pause/resume, និងផ្លាស់ប្តូរ pool_mode
 សម្រាប់ទិន្នន័យនីមួយៗ។
 
+## រូបថតអេក្រង់
+
+| ចូលប្រើប្រាស់ | ផ្ទាំងគ្រប់គ្រង | Pools |
+|---|---|---|
+| ![ចូលប្រើប្រាស់](docs/screenshots/00-login.png) | ![ផ្ទាំងគ្រប់គ្រង](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| អតិថិជន | ម៉ាស៊ីនមេ | ស្ថិតិ |
+|---|---|---|
+| ![អតិថិជន](docs/screenshots/03-clients.png) | ![ម៉ាស៊ីនមេ](docs/screenshots/04-servers.png) | ![ស្ថិតិ](docs/screenshots/05-stats.png) |
+
+| ទិន្នន័យ | ការកំណត់រចនាសម្ព័ន្ធ | គ្រប់គ្រងម៉ាស៊ីនមេ |
+|---|---|---|
+| ![ទិន្នន័យ](docs/screenshots/06-databases.png) | ![ការកំណត់រចនាសម្ព័ន្ធ](docs/screenshots/07-configuration.png) | ![គ្រប់គ្រងម៉ាស៊ីនមេ](docs/screenshots/08-manage-servers.png) |
+
+| អ្នកប្រើប្រាស់ | កំណត់ហេតុសវនកម្ម | បម្រុងទុក & ស្តារឡើងវិញ |
+|---|---|---|
+| ![អ្នកប្រើប្រាស់](docs/screenshots/09-users.png) | ![កំណត់ហេតុសវនកម្ម](docs/screenshots/10-audit-log.png) | ![បម្រុងទុក & ស្តារឡើងវិញ](docs/screenshots/11-backup-restore.png) |
+
+| អត្តសញ្ញាណ |
+|---|
+| ![អត្តសញ្ញាណ](docs/screenshots/12-identity.png) |
+
 ## ជង់បច្ចេកវិទ្យា
 - Backend: Go + Gin + pgx (ភ្ជាប់ដោយផ្ទាល់ទៅកាន់ console គ្រប់គ្រងរបស់ PgBouncer តាមរយៈ protocol Postgres)
 - Frontend: Vue 3 + TypeScript + Vite (មានរួចហើយនៅក្នុងថតឯកសារ `web/`)

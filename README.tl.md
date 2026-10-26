@@ -6,6 +6,28 @@ Isang magaan na web GUI para sa pag-monitor at pag-control ng PgBouncer: status 
 pools/clients/servers/stats, pag-start/stop/restart ng serbisyo, pag-reload ng configuration,
 pag-pause/resume, at pagbabago ng pool_mode kada database.
 
+## Mga Screenshot
+
+| Mag-login | Dashboard | Pools |
+|---|---|---|
+| ![Mag-login](docs/screenshots/00-login.png) | ![Dashboard](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| Clients | Servers | Stats |
+|---|---|---|
+| ![Clients](docs/screenshots/03-clients.png) | ![Servers](docs/screenshots/04-servers.png) | ![Stats](docs/screenshots/05-stats.png) |
+
+| Mga Database | Configuration | Pamahalaan ang mga Server |
+|---|---|---|
+| ![Mga Database](docs/screenshots/06-databases.png) | ![Configuration](docs/screenshots/07-configuration.png) | ![Pamahalaan ang mga Server](docs/screenshots/08-manage-servers.png) |
+
+| Mga User | Audit Log | Backup & Restore |
+|---|---|---|
+| ![Mga User](docs/screenshots/09-users.png) | ![Audit Log](docs/screenshots/10-audit-log.png) | ![Backup & Restore](docs/screenshots/11-backup-restore.png) |
+
+| Identity |
+|---|
+| ![Identity](docs/screenshots/12-identity.png) |
+
 ## Stack
 - Backend: Go + Gin + pgx (direktang kumokonekta sa admin console ng PgBouncer gamit ang Postgres protocol)
 - Frontend: Vue 3 + TypeScript + Vite (nasa `web/` folder na)

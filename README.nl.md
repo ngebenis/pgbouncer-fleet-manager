@@ -6,6 +6,28 @@ Een lichtgewicht web-GUI voor het monitoren en beheren van PgBouncer: status van
 pools/clients/servers/stats, de service starten/stoppen/herstarten, configuratie herladen,
 pauzeren/hervatten, en pool_mode per database wijzigen.
 
+## Schermafbeeldingen
+
+| Inloggen | Dashboard | Pools |
+|---|---|---|
+| ![Inloggen](docs/screenshots/00-login.png) | ![Dashboard](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| Clients | Servers | Statistieken |
+|---|---|---|
+| ![Clients](docs/screenshots/03-clients.png) | ![Servers](docs/screenshots/04-servers.png) | ![Statistieken](docs/screenshots/05-stats.png) |
+
+| Databases | Configuratie | Servers Beheren |
+|---|---|---|
+| ![Databases](docs/screenshots/06-databases.png) | ![Configuratie](docs/screenshots/07-configuration.png) | ![Servers Beheren](docs/screenshots/08-manage-servers.png) |
+
+| Gebruikers | Auditlogboek | Back-up & Herstel |
+|---|---|---|
+| ![Gebruikers](docs/screenshots/09-users.png) | ![Auditlogboek](docs/screenshots/10-audit-log.png) | ![Back-up & Herstel](docs/screenshots/11-backup-restore.png) |
+
+| Identiteit |
+|---|
+| ![Identiteit](docs/screenshots/12-identity.png) |
+
 ## Stack
 - Backend: Go + Gin + pgx (maakt rechtstreeks verbinding met de PgBouncer-adminconsole via het Postgres-protocol)
 - Frontend: Vue 3 + TypeScript + Vite (al aanwezig in de map `web/`)

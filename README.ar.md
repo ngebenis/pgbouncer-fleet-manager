@@ -5,6 +5,28 @@
 واجهة ويب خفيفة لمراقبة والتحكم في PgBouncer: عرض حالة pools/clients/servers/stats، تشغيل/إيقاف/
 إعادة تشغيل الخدمة، إعادة تحميل الإعدادات، الإيقاف المؤقت/الاستئناف، وتغيير pool_mode لكل قاعدة بيانات.
 
+## لقطات الشاشة
+
+| تسجيل الدخول | لوحة التحكم | Pools |
+|---|---|---|
+| ![تسجيل الدخول](docs/screenshots/00-login.png) | ![لوحة التحكم](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| العملاء | الخوادم | الإحصائيات |
+|---|---|---|
+| ![العملاء](docs/screenshots/03-clients.png) | ![الخوادم](docs/screenshots/04-servers.png) | ![الإحصائيات](docs/screenshots/05-stats.png) |
+
+| قواعد البيانات | الإعدادات | إدارة الخوادم |
+|---|---|---|
+| ![قواعد البيانات](docs/screenshots/06-databases.png) | ![الإعدادات](docs/screenshots/07-configuration.png) | ![إدارة الخوادم](docs/screenshots/08-manage-servers.png) |
+
+| المستخدمون | سجل التدقيق | النسخ الاحتياطي والاستعادة |
+|---|---|---|
+| ![المستخدمون](docs/screenshots/09-users.png) | ![سجل التدقيق](docs/screenshots/10-audit-log.png) | ![النسخ الاحتياطي والاستعادة](docs/screenshots/11-backup-restore.png) |
+
+| الهوية |
+|---|
+| ![الهوية](docs/screenshots/12-identity.png) |
+
 ## التقنيات المستخدمة
 - الخلفية (Backend): Go + Gin + pgx (يتصل مباشرة بوحدة تحكم إدارة PgBouncer عبر بروتوكول Postgres)
 - الواجهة الأمامية (Frontend): Vue 3 + TypeScript + Vite (موجودة بالفعل في مجلد `web/`)

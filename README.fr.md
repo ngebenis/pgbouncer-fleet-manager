@@ -6,6 +6,28 @@ Une interface web légère pour surveiller et contrôler PgBouncer : état des p
 démarrage/arrêt/redémarrage du service, rechargement de la configuration, pause/reprise, et
 changement du pool_mode par base de données.
 
+## Captures d'écran
+
+| Connexion | Dashboard | Pools |
+|---|---|---|
+| ![Connexion](docs/screenshots/00-login.png) | ![Dashboard](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| Clients | Serveurs | Statistiques |
+|---|---|---|
+| ![Clients](docs/screenshots/03-clients.png) | ![Serveurs](docs/screenshots/04-servers.png) | ![Statistiques](docs/screenshots/05-stats.png) |
+
+| Bases de données | Configuration | Gérer les Serveurs |
+|---|---|---|
+| ![Bases de données](docs/screenshots/06-databases.png) | ![Configuration](docs/screenshots/07-configuration.png) | ![Gérer les Serveurs](docs/screenshots/08-manage-servers.png) |
+
+| Utilisateurs | Journal d\'Audit | Sauvegarde & Restauration |
+|---|---|---|
+| ![Utilisateurs](docs/screenshots/09-users.png) | ![Journal d\'Audit](docs/screenshots/10-audit-log.png) | ![Sauvegarde & Restauration](docs/screenshots/11-backup-restore.png) |
+
+| Identité |
+|---|
+| ![Identité](docs/screenshots/12-identity.png) |
+
 ## Stack technique
 - Backend : Go + Gin + pgx (connexion directe à la console d'administration de PgBouncer via le protocole Postgres)
 - Frontend : Vue 3 + TypeScript + Vite (déjà présent dans le dossier `web/`)

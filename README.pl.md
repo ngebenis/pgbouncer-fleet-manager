@@ -6,6 +6,28 @@ Lekki interfejs webowy do monitorowania i sterowania PgBouncer: stan pools/clien
 uruchamianie/zatrzymywanie/restartowanie usługi, przeładowanie konfiguracji, wstrzymanie/
 wznowienie oraz zmiana pool_mode dla każdej bazy danych.
 
+## Zrzuty ekranu
+
+| Logowanie | Dashboard | Pools |
+|---|---|---|
+| ![Logowanie](docs/screenshots/00-login.png) | ![Dashboard](docs/screenshots/01-dashboard.png) | ![Pools](docs/screenshots/02-pools.png) |
+
+| Klienci | Serwery | Statystyki |
+|---|---|---|
+| ![Klienci](docs/screenshots/03-clients.png) | ![Serwery](docs/screenshots/04-servers.png) | ![Statystyki](docs/screenshots/05-stats.png) |
+
+| Bazy danych | Konfiguracja | Zarządzaj Serwerami |
+|---|---|---|
+| ![Bazy danych](docs/screenshots/06-databases.png) | ![Konfiguracja](docs/screenshots/07-configuration.png) | ![Zarządzaj Serwerami](docs/screenshots/08-manage-servers.png) |
+
+| Użytkownicy | Dziennik Audytu | Kopia Zapasowa i Przywracanie |
+|---|---|---|
+| ![Użytkownicy](docs/screenshots/09-users.png) | ![Dziennik Audytu](docs/screenshots/10-audit-log.png) | ![Kopia Zapasowa i Przywracanie](docs/screenshots/11-backup-restore.png) |
+
+| Tożsamość |
+|---|
+| ![Tożsamość](docs/screenshots/12-identity.png) |
+
 ## Stos technologiczny
 - Backend: Go + Gin + pgx (łączy się bezpośrednio z konsolą administracyjną PgBouncer przez protokół Postgres)
 - Frontend: Vue 3 + TypeScript + Vite (już dostępny w folderze `web/`)
