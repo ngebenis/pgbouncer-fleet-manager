@@ -2,6 +2,8 @@
 
 *[Bahasa Indonesia](README.md) · [English](README.en.md) · [中文](README.zh.md) · [हिन्दी](README.hi.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md) · [ไทย](README.th.md) · [ខ្មែរ](README.km.md) · [Tagalog](README.tl.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Polski](README.pl.md) · [Italiano](README.it.md) · [Türkçe](README.tr.md) · [தமிழ்](README.ta.md) · [Українська](README.uk.md) · [Deutsch](README.de.md) · [Nederlands](README.nl.md)*
 
+🍲 **[گالری آشپزی و فرهنگ اندونزی را کاوش کنید ←](CULTURE.md)**
+
 یک رابط وب سبک برای نظارت و کنترل PgBouncer: مشاهده وضعیت pools/clients/servers/stats، start/stop/
 restart کردن سرویس، reload کردن تنظیمات، pause/resume کردن، و تغییر pool_mode به ازای هر پایگاه
 داده.

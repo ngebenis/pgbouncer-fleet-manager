@@ -2,6 +2,8 @@
 
 *[Bahasa Indonesia](README.md) · [English](README.en.md) · [中文](README.zh.md) · [हिन्दी](README.hi.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md) · [ไทย](README.th.md) · [ខ្មែរ](README.km.md) · [Tagalog](README.tl.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Polski](README.pl.md) · [Italiano](README.it.md) · [Türkçe](README.tr.md) · [فارسی](README.fa.md) · [Українська](README.uk.md) · [Deutsch](README.de.md) · [Nederlands](README.nl.md)*
 
+🍲 **[இந்தோனேசிய உணவு & கலாச்சார கேலரியை ஆராயுங்கள் →](CULTURE.md)**
+
 PgBouncer-ஐ கண்காணிக்கவும் கட்டுப்படுத்தவும் ஒரு இலகுவான வெப் GUI: pools/clients/servers/stats
 நிலையைக் காண்பது, சேவையை start/stop/restart செய்வது, கட்டமைப்பை reload செய்வது, pause/resume
 செய்வது, மற்றும் ஒவ்வொரு தரவுத்தளத்திற்கும் pool_mode-ஐ மாற்றுவது.

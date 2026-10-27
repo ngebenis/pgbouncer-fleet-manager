@@ -2,6 +2,8 @@
 
 *[Bahasa Indonesia](README.md) · [English](README.en.md) · [中文](README.zh.md) · [हिन्दी](README.hi.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md) · [ไทย](README.th.md) · [Tagalog](README.tl.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Polski](README.pl.md) · [Italiano](README.it.md) · [Türkçe](README.tr.md) · [தமிழ்](README.ta.md) · [فارسی](README.fa.md) · [Українська](README.uk.md) · [Deutsch](README.de.md) · [Nederlands](README.nl.md)*
 
+🍲 **[ស្វែងយល់ពីវិចិត្រសាលអាហារ និងវប្បធម៌ឥណ្ឌូនេស៊ី →](CULTURE.md)**
+
 Web GUI ស្រាលមួយសម្រាប់ត្រួតពិនិត្យ និងគ្រប់គ្រង PgBouncer៖ មើលស្ថានភាព pools/clients/servers/stats,
 start/stop/restart សេវាកម្ម, reload ការកំណត់រចនាសម្ព័ន្ធ, pause/resume, និងផ្លាស់ប្តូរ pool_mode
 សម្រាប់ទិន្នន័យនីមួយៗ។

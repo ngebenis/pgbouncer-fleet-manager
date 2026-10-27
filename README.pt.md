@@ -2,6 +2,8 @@
 
 *[Bahasa Indonesia](README.md) · [English](README.en.md) · [中文](README.zh.md) · [हिन्दी](README.hi.md) · [Español](README.es.md) · [Français](README.fr.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md) · [ไทย](README.th.md) · [ខ្មែរ](README.km.md) · [Tagalog](README.tl.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Polski](README.pl.md) · [Italiano](README.it.md) · [Türkçe](README.tr.md) · [தமிழ்](README.ta.md) · [فارسی](README.fa.md) · [Українська](README.uk.md) · [Deutsch](README.de.md) · [Nederlands](README.nl.md)*
 
+🍲 **[Explore a Galeria Culinária e Cultural da Indonésia →](CULTURE.md)**
+
 Uma interface web leve para monitorar e controlar o PgBouncer: status de pools/clients/servers/stats,
 iniciar/parar/reiniciar o serviço, recarregar a configuração, pausar/retomar, e alterar o pool_mode
 por banco de dados.

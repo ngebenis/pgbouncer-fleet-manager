@@ -2,6 +2,8 @@
 
 *[Bahasa Indonesia](README.md) · [English](README.en.md) · [中文](README.zh.md) · [हिन्दी](README.hi.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md) · [ไทย](README.th.md) · [ខ្មែរ](README.km.md) · [Tagalog](README.tl.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Polski](README.pl.md) · [Italiano](README.it.md) · [Türkçe](README.tr.md) · [தமிழ்](README.ta.md) · [فارسی](README.fa.md) · [Deutsch](README.de.md) · [Nederlands](README.nl.md)*
 
+🍲 **[Дослідіть галерею кулінарії та культури Індонезії →](CULTURE.md)**
+
 Легкий веб-інтерфейс для моніторингу та керування PgBouncer: стан pools/clients/servers/stats,
 запуск/зупинка/перезапуск сервісу, перезавантаження конфігурації, пауза/відновлення та зміна
 pool_mode для кожної бази даних.

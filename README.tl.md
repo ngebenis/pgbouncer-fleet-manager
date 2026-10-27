@@ -2,6 +2,8 @@
 
 *[Bahasa Indonesia](README.md) · [English](README.en.md) · [中文](README.zh.md) · [हिन्दी](README.hi.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md) · [ไทย](README.th.md) · [ខ្មែរ](README.km.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Polski](README.pl.md) · [Italiano](README.it.md) · [Türkçe](README.tr.md) · [தமிழ்](README.ta.md) · [فارسی](README.fa.md) · [Українська](README.uk.md) · [Deutsch](README.de.md) · [Nederlands](README.nl.md)*
 
+🍲 **[Tuklasin ang Galerya ng Lutuin at Kultura ng Indonesia →](CULTURE.md)**
+
 Isang magaan na web GUI para sa pag-monitor at pag-control ng PgBouncer: status ng
 pools/clients/servers/stats, pag-start/stop/restart ng serbisyo, pag-reload ng configuration,
 pag-pause/resume, at pagbabago ng pool_mode kada database.

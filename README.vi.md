@@ -2,6 +2,8 @@
 
 *[Bahasa Indonesia](README.md) · [English](README.en.md) · [中文](README.zh.md) · [हिन्दी](README.hi.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md) · [ไทย](README.th.md) · [ខ្មែរ](README.km.md) · [Tagalog](README.tl.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Polski](README.pl.md) · [Italiano](README.it.md) · [Türkçe](README.tr.md) · [தமிழ்](README.ta.md) · [فارسی](README.fa.md) · [Українська](README.uk.md) · [Deutsch](README.de.md) · [Nederlands](README.nl.md)*
 
+🍲 **[Khám phá Phòng trưng bày Ẩm thực & Văn hóa Indonesia →](CULTURE.md)**
+
 Giao diện web nhẹ để giám sát & điều khiển PgBouncer: trạng thái pools/clients/servers/stats,
 start/stop/restart service, reload cấu hình, pause/resume, và thay đổi pool_mode theo từng
 cơ sở dữ liệu.

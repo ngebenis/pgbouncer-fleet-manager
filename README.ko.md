@@ -2,6 +2,8 @@
 
 *[Bahasa Indonesia](README.md) · [English](README.en.md) · [中文](README.zh.md) · [हिन्दी](README.hi.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md) · [ไทย](README.th.md) · [ខ្មែរ](README.km.md) · [Tagalog](README.tl.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [Polski](README.pl.md) · [Italiano](README.it.md) · [Türkçe](README.tr.md) · [தமிழ்](README.ta.md) · [فارسی](README.fa.md) · [Українська](README.uk.md) · [Deutsch](README.de.md) · [Nederlands](README.nl.md)*
 
+🍲 **[인도네시아 음식 & 문화 갤러리 둘러보기 →](CULTURE.md)**
+
 PgBouncer를 모니터링하고 제어하기 위한 가벼운 웹 GUI입니다: pools/clients/servers/stats 상태
 확인, 서비스 start/stop/restart, 설정 reload, pause/resume, 데이터베이스별 pool_mode 변경 등을
 제공합니다.

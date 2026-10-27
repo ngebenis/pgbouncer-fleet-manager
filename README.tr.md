@@ -2,6 +2,8 @@
 
 *[Bahasa Indonesia](README.md) · [English](README.en.md) · [中文](README.zh.md) · [हिन्दी](README.hi.md) · [Español](README.es.md) · [Français](README.fr.md) · [Português](README.pt.md) · [العربية](README.ar.md) · [বাংলা](README.bn.md) · [Русский](README.ru.md) · [ไทย](README.th.md) · [ខ្មែរ](README.km.md) · [Tagalog](README.tl.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Polski](README.pl.md) · [Italiano](README.it.md) · [தமிழ்](README.ta.md) · [فارسی](README.fa.md) · [Українська](README.uk.md) · [Deutsch](README.de.md) · [Nederlands](README.nl.md)*
 
+🍲 **[Endonezya Mutfak ve Kültür Galerisi'ni Keşfedin →](CULTURE.md)**
+
 PgBouncer'ı izlemek ve kontrol etmek için hafif bir web arayüzü: pools/clients/servers/stats
 durumu, servisi başlatma/durdurma/yeniden başlatma, yapılandırmayı yeniden yükleme, duraklat/
 devam ettir ve veritabanı başına pool_mode değiştirme.
