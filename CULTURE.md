@@ -115,11 +115,13 @@ There is a local tradition called **"ngocek cuko"** — enjoying the sauce by si
 ---
 
 <sub>
-Ini adalah entri perdana dari galeri yang kami harap akan terus tumbuh. Kontribusi untuk menambahkan
-kuliner, budaya, atau seni daerah lain di Indonesia (atau negara lain) sangat terbuka — silakan ajukan
-Pull Request.
+Halaman ini adalah perintisan konsep "satu repo, satu kuliner" — tiap repo kami yang memuat halaman
+budaya seperti ini berfokus menampilkan satu kuliner/budaya daerah secara mendalam, alih-alih
+mengumpulkan banyak entri dalam satu tempat. Pempek Palembang adalah yang pertama; kuliner daerah
+lain akan hadir di repo-repo tersendiri.
 <br><br>
-This is the first entry in what we hope will become a growing gallery. Contributions adding other
-regional Indonesian (or other countries') culinary, cultural, or artistic heritage are very welcome —
-feel free to open a Pull Request.
+This page is the pilot for a "one repo, one dish" approach — each of our repos that carries a page
+like this focuses on showcasing a single regional dish/culture in depth, rather than collecting many
+entries in one place. Pempek Palembang is the first; other regional dishes will live in their own
+separate repos.
 </sub>
