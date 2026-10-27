@@ -215,3 +215,9 @@ pools, clients, stats, start/stop/restart przez SSH, przeładowanie konfiguracji
   **Users**) — pamiętaj, aby zmienić hasło domyślnego konta `admin` natychmiast po pierwszym
   wdrożeniu.
 - Przed każdym zapisem do `pgbouncer.ini` automatycznie tworzony jest plik `.bak`.
+
+## Wesprzyj
+
+☕ *Postaw mi kawę*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

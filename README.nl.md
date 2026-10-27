@@ -215,3 +215,9 @@ clients, stats, start/stop/restart via SSH, configuratie herladen).
   de eerste deployment wijzigt.
 - Er wordt automatisch een `.bak`-bestand aangemaakt vóór elke schrijfactie naar
   `pgbouncer.ini`.
+
+## Doneren
+
+☕ *Trakteer me op een kopje koffie*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

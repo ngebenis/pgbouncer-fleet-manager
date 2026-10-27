@@ -215,3 +215,9 @@ Die App ist unter `http://<dieser-host>:8088` mit dem vollständigen Dashboard v
   **Users**-Menü) — stelle sicher, dass du das Passwort des Standard-`admin`-Kontos sofort nach
   dem ersten Deployment änderst.
 - Vor jedem Schreibvorgang in `pgbouncer.ini` wird automatisch eine `.bak`-Datei erstellt.
+
+## Spenden
+
+☕ *Spendier mir eine Tasse Kaffee*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

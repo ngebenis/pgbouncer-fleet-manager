@@ -212,3 +212,9 @@ clients, stats, start/stop/restart via SSH, reload de configuração).
   si já usa autenticação baseada em sessão com roles (admin vs. viewer, veja o menu **Users**) —
   certifique-se de alterar a senha da conta `admin` padrão imediatamente após o primeiro deploy.
 - Um arquivo `.bak` é criado automaticamente antes de cada escrita em `pgbouncer.ini`.
+
+## Doar
+
+☕ *Pague-me um café*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

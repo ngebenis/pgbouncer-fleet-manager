@@ -207,3 +207,9 @@ stats, start/stop/restart ผ่าน SSH, reload การตั้งค่�
   session-based auth พร้อมบทบาท (admin กับ viewer ดูเมนู **Users**) อยู่แล้ว — ควรเปลี่ยนรหัสผ่าน
   บัญชี `admin` เริ่มต้นทันทีหลัง deploy ครั้งแรก
 - ไฟล์ `.bak` จะถูกสร้างขึ้นอัตโนมัติก่อนการเขียนลง `pgbouncer.ini` ทุกครั้ง
+
+## บริจาค
+
+☕ *เลี้ยงกาแฟฉันสักแก้ว*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

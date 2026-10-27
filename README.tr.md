@@ -213,3 +213,9 @@ SSH üzerinden start/stop/restart, yapılandırma yeniden yükleme) kullanılabi
   doğrulama kullanır — ilk dağıtımdan hemen sonra varsayılan `admin` hesabının şifresini
   değiştirdiğinizden emin olun.
 - Her `pgbouncer.ini` yazma işleminden önce otomatik olarak bir `.bak` dosyası oluşturulur.
+
+## Bağış Yap
+
+☕ *Bana bir fincan kahve ısmarla*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

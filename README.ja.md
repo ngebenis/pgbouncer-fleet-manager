@@ -212,3 +212,9 @@ clients、stats、SSH 経由の start/stop/restart、設定の reload）が使�
   います — 初回デプロイ後は、デフォルトの `admin` アカウントのパスワードを必ずすぐに変更して
   ください。
 - `pgbouncer.ini` への書き込みのたびに `.bak` ファイルが自動的に作成されます。
+
+## 寄付
+
+☕ *コーヒーを一杯おごってください*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

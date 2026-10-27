@@ -213,3 +213,9 @@ clients, stats, start/stop/restart តាមរយៈ SSH, reload ការក�
   login ខ្លួនឯងប្រើការផ្ទៀងផ្ទាត់ផ្អែកលើ session ដែលមាន role រួចហើយ (admin និង viewer សូមមើលម៉ឺនុយ
   **Users**) — សូមប្រាកដថាបានផ្លាស់ប្តូរពាក្យសម្ងាត់គណនី `admin` លំនាំដើមភ្លាមៗបន្ទាប់ពី deploy ជាលើកដំបូង។
 - ឯកសារ `.bak` នឹងត្រូវបានបង្កើតដោយស្វ័យប្រវត្តិមុនពេលសរសេរទៅ `pgbouncer.ini` រាល់ពេល។
+
+## បរិច្ចាគ
+
+☕ *អញ្ជើញកាហ្វេមួយកែវឱ្យខ្ញុំផង*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

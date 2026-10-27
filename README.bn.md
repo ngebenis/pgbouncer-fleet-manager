@@ -210,3 +210,9 @@ stats, SSH-এর মাধ্যমে start/stop/restart, কনফিগ relo
   ইতিমধ্যে session-based auth এবং role (admin বনাম viewer, **Users** মেনু দেখুন) ব্যবহার করে —
   প্রথমবার deploy করার পরপরই ডিফল্ট `admin` অ্যাকাউন্টের পাসওয়ার্ড পরিবর্তন করতে ভুলবেন না।
 - প্রতিবার `pgbouncer.ini`-তে লেখার আগে স্বয়ংক্রিয়ভাবে একটি `.bak` ফাইল তৈরি হয়।
+
+## দান করুন
+
+☕ *আমাকে এক কাপ কফি খাওয়ান*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

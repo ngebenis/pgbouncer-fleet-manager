@@ -208,3 +208,9 @@ SSH를 통한 start/stop/restart, 설정 reload)를 제공합니다.
   역할 기반(admin과 viewer, **Users** 메뉴 참고) 세션 인증을 사용합니다 — 첫 배포 직후에는
   반드시 기본 `admin` 계정의 비밀번호를 변경하세요.
 - `pgbouncer.ini`에 쓰기 작업을 할 때마다 `.bak` 파일이 자동으로 생성됩니다.
+
+## 후원
+
+☕ *커피 한 잔 사주세요*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

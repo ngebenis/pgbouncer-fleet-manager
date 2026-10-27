@@ -216,3 +216,9 @@ configuration).
   **Users** menu) — siguraduhing palitan agad ang password ng default na `admin` account
   pagkatapos ng unang deployment.
 - Awtomatikong gagawa ng `.bak` file bago ang bawat pagsulat sa `pgbouncer.ini`.
+
+## Mag-donate
+
+☕ *Libre mo ako ng isang tasang kape*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

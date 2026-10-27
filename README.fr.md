@@ -214,3 +214,9 @@ L'application sera disponible sur `http://<cet-hôte>:8088`, avec le tableau de 
   viewer, voir le menu **Users**) — assurez-vous de changer le mot de passe du compte `admin` par
   défaut immédiatement après le premier déploiement.
 - Un fichier `.bak` est créé automatiquement avant chaque écriture dans `pgbouncer.ini`.
+
+## Faire un don
+
+☕ *Offrez-moi une tasse de café*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

@@ -207,3 +207,9 @@ stats, start/stop/restart via SSH, reload config).
   memakai session-based auth dengan role (admin vs viewer, lihat menu **Pengguna**) — pastikan
   password akun `admin` default sudah diganti segera setelah deploy pertama kali.
 - File `.bak` otomatis dibuat sebelum setiap penulisan `pgbouncer.ini`.
+
+## Donasi
+
+☕ *Traktir saya untuk segelas kopi*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

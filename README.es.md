@@ -213,3 +213,9 @@ clients, stats, start/stop/restart vía SSH, reload de configuración).
   asegúrate de cambiar la contraseña de la cuenta `admin` por defecto inmediatamente después del
   primer despliegue.
 - Se crea automáticamente un archivo `.bak` antes de cada escritura en `pgbouncer.ini`.
+
+## Donar
+
+☕ *Invítame a una taza de café*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

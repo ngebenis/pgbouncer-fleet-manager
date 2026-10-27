@@ -204,3 +204,9 @@ stats、通过 SSH 启停/重启、重新加载配置)。
   的认证并支持角色区分(管理员 vs 只读用户，参见 **Users** 菜单)——请务必在首次部署后
   立即修改默认 `admin` 账户的密码。
 - 每次写入 `pgbouncer.ini` 之前都会自动生成 `.bak` 备份文件。
+
+## 捐赠
+
+☕ *请我喝杯咖啡*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

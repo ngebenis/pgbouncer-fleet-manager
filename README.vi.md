@@ -209,3 +209,9 @@ stats, start/stop/restart qua SSH, reload cấu hình).
   đăng nhập đã sử dụng xác thực dựa trên session với vai trò (admin và viewer, xem menu **Users**)
   — hãy đảm bảo đổi mật khẩu tài khoản `admin` mặc định ngay sau lần deploy đầu tiên.
 - Một file `.bak` sẽ tự động được tạo trước mỗi lần ghi vào `pgbouncer.ini`.
+
+## Quyên góp
+
+☕ *Mời tôi một ly cà phê*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)

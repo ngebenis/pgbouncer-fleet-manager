@@ -207,3 +207,9 @@ clients, stats, start/stop/restart via SSH, reload config).
   Login already uses session-based auth with roles (admin vs. viewer, see the **Users** menu) —
   make sure to change the default `admin` account's password immediately after first deploy.
 - A `.bak` file is automatically created before every write to `pgbouncer.ini`.
+
+## Donate
+
+☕ *Buy me a cup of coffee*
+
+PayPal: **b3n1_id@yahoo.com** (benisantoso72@gmail.com)
